@@ -18,14 +18,27 @@ import com.example.blogmultiplatform.util.fetchMainPosts
 import com.example.blogmultiplatform.util.fetchPopularPosts
 import com.example.blogmultiplatform.util.fetchSponsoredPosts
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
+import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
+import com.varabyte.kobweb.compose.ui.modifiers.bottom
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxSize
+import com.varabyte.kobweb.compose.ui.modifiers.position
+import com.varabyte.kobweb.compose.ui.modifiers.right
+import com.varabyte.kobweb.compose.ui.modifiers.size
+import com.varabyte.kobweb.compose.ui.modifiers.backgroundColor
+import com.varabyte.kobweb.compose.ui.modifiers.borderRadius
+import com.varabyte.kobweb.compose.ui.modifiers.onClick
 import com.varabyte.kobweb.core.Page
 import com.varabyte.kobweb.core.rememberPageContext
+import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
 import kotlinx.coroutines.launch
+import org.jetbrains.compose.web.css.Position
+import org.jetbrains.compose.web.css.px
+import com.varabyte.kobweb.compose.ui.modifiers.fontSize
+import com.varabyte.kobweb.compose.ui.modifiers.color
 
 @Page
 @Composable
@@ -163,5 +176,31 @@ fun HomePage() {
         )
         NewsletterSection(breakpoint = breakpoint)
         FooterSection()
+        FloatingActionButton {
+            // TODO: Add your action here, e.g., context.router.navigateTo(Screen.YourTargetPage.route)
+        }
+    }
+}
+
+@Composable
+fun FloatingActionButton(onClick: () -> Unit) {
+    Box(
+        modifier = Modifier
+            .position(Position.Fixed)
+            .right(96.px)
+            .bottom(96.px)
+            .size(56.px)
+            .backgroundColor(com.varabyte.kobweb.compose.ui.graphics.Colors.Blue)
+            .borderRadius(28.px)
+            .onClick { onClick() },
+        contentAlignment = Alignment.Center
+    ) {
+        SpanText(
+            text = "+",
+            modifier = Modifier
+                .backgroundColor(com.varabyte.kobweb.compose.ui.graphics.Colors.Transparent)
+                .fontSize(32.px)
+                .color(com.varabyte.kobweb.compose.ui.graphics.Colors.White)
+        )
     }
 }
