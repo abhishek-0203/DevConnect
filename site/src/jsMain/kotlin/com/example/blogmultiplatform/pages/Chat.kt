@@ -68,7 +68,7 @@ fun ChatScreen() {
         }
     }
 
-//    CenteredColumnContent {
+    Column {
         Column(
             ChatBoxStyle.toModifier().height(80.percent).width(600.px).fontSize(22.px)
         ) {
@@ -114,5 +114,5 @@ fun ChatScreen() {
                 onClick = ::sendMessage
             )*/
         }
-//    }
+    }
 }
