@@ -177,7 +177,7 @@ fun HomePage() {
         NewsletterSection(breakpoint = breakpoint)
         FooterSection()
         FloatingActionButton {
-            // TODO: Add your action here, e.g., context.router.navigateTo(Screen.YourTargetPage.route)
+            context.router.navigateTo(Screen.Chat.route)
         }
     }
 }
@@ -195,8 +195,7 @@ fun FloatingActionButton(onClick: () -> Unit) {
             .backgroundColor(com.varabyte.kobweb.compose.ui.graphics.Colors.Blue)
             .borderRadius(28.px)
             .onClick {
-                context
-                //onClick()
+                onClick()
                      },
         contentAlignment = Alignment.Center
     ) {

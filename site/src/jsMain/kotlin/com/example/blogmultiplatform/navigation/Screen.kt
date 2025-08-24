@@ -7,6 +7,7 @@ import com.example.blogmultiplatform.models.Constants.QUERY_PARAM
 import com.example.blogmultiplatform.models.Constants.UPDATED_PARAM
 
 sealed class Screen(val route: String) {
+    object Chat : Screen(route = "/chat/")
     object AdminHome : Screen(route = "/admin/")
     object AdminLogin : Screen(route = "/admin/login")
     object AdminCreate : Screen(route = "/admin/create") {
