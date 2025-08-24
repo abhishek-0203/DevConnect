@@ -184,6 +184,8 @@ fun HomePage() {
 
 @Composable
 fun FloatingActionButton(onClick: () -> Unit) {
+    val context = rememberPageContext()
+
     Box(
         modifier = Modifier
             .position(Position.Fixed)
@@ -192,7 +194,10 @@ fun FloatingActionButton(onClick: () -> Unit) {
             .size(56.px)
             .backgroundColor(com.varabyte.kobweb.compose.ui.graphics.Colors.Blue)
             .borderRadius(28.px)
-            .onClick { onClick() },
+            .onClick {
+                context
+                //onClick()
+                     },
         contentAlignment = Alignment.Center
     ) {
         SpanText(
