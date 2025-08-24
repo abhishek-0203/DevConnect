@@ -1,0 +1,92 @@
+[2025-08-25 00:45:25] Logger initialized. Writing to /home/abhishek/AndroidStudioProjects/BlogMultiplatform/site/site.log
+[2025-08-25 00:45:29] [UserCheck.kt::checkUserId] Check user ID for : 68a8dc01816a0d09ada8066f
+[2025-08-25 00:45:29] [MongoDB.kt::checkUserId] MongoDB.kt::checkUserId - checkUserId called for id: 68a8dc01816a0d09ada8066f
+[2025-08-25T00:45] [ApiFunctions.kt::checkUserId] INFO: ID encodeToByteArray = 34,54,56,97,56,100,99,48,49,56,49,54,97,48,100,48,57,97,100,97,56,48,54,54,102,34
+[2025-08-25T00:45] [Functions.kt::isUserLoggedIn] INFO: Loading...
+[2025-08-25T00:45] [Functions.kt::isUserLoggedIn] INFO: Login success for remembered: true, userId: 68a8dc01816a0d09ada8066f
+[2025-08-25T00:45] [ApiFunctions.kt::checkUserId] INFO: ID encode string = "68a8dc01816a0d09ada8066f"
+[2025-08-25 00:45:29] [MongoDB.kt::checkUserId] MongoDB.kt::checkUserId - Checked user ID: 68a8dc01816a0d09ada8066f, found: 1
+[2025-08-25 00:45:29] [UserCheck.kt::checkUserId] Check user ID result: true for ID: 68a8dc01816a0d09ada8066f
+[2025-08-25T00:45] [ChatScreen.kt::] INFO: 
+[2025-08-25T00:45] [Functions.kt::isUserLoggedIn] INFO: Loading...
+[2025-08-25T00:45] [Functions.kt::isUserLoggedIn] INFO: Login success for remembered: true, userId: 68aaeb781d9574e87d97adab
+[2025-08-25T00:45] [ApiFunctions.kt::checkUserId] INFO: ID encode string = "68aaeb781d9574e87d97adab"
+[2025-08-25T00:45] [ApiFunctions.kt::checkUserId] INFO: ID encodeToByteArray = 34,54,56,97,97,101,98,55,56,49,100,57,53,55,52,101,56,55,100,57,55,97,100,97,98,34
+[2025-08-25 00:45:35] [UserCheck.kt::checkUserId] Check user ID for : 68aaeb781d9574e87d97adab
+[2025-08-25 00:45:35] [MongoDB.kt::checkUserId] MongoDB.kt::checkUserId - checkUserId called for id: 68aaeb781d9574e87d97adab
+[2025-08-25 00:45:35] [MongoDB.kt::checkUserId] MongoDB.kt::checkUserId - Checked user ID: 68aaeb781d9574e87d97adab, found: 1
+[2025-08-25 00:45:35] [UserCheck.kt::checkUserId] Check user ID result: true for ID: 68aaeb781d9574e87d97adab
+[2025-08-25T00:45] [ChatScreen.kt::] INFO: 
+[2025-08-25T00:45] [ChatScreen.kt::] INFO: [object Object]
+[2025-08-25T00:45] [ChatScreen.kt::] INFO: [object Object]
+[2025-08-25T00:45] [ChatScreen.kt::] INFO: [object Object]
+[2025-08-25T00:45] [ChatScreen.kt::] INFO: [object Object]
+[2025-08-25T00:47] [ApiFunctions.kt::checkUserId] INFO: ID encodeToByteArray = 34,54,56,97,97,101,98,55,56,49,100,57,53,55,52,101,56,55,100,57,55,97,100,97,98,34
+[2025-08-25T00:47] [ApiFunctions.kt::checkUserId] INFO: ID encode string = "68aaeb781d9574e87d97adab"
+[2025-08-25 00:47:11] [UserCheck.kt::checkUserId] Check user ID for : 68aaeb781d9574e87d97adab
+[2025-08-25 00:47:11] [MongoDB.kt::checkUserId] MongoDB.kt::checkUserId - checkUserId called for id: 68aaeb781d9574e87d97adab
+[2025-08-25T00:47] [Functions.kt::isUserLoggedIn] INFO: Loading...
+[2025-08-25T00:47] [Functions.kt::isUserLoggedIn] INFO: Login success for remembered: true, userId: 68aaeb781d9574e87d97adab
+[2025-08-25 00:47:12] [MongoDB.kt::checkUserId] MongoDB.kt::checkUserId - Checked user ID: 68aaeb781d9574e87d97adab, found: 1
+[2025-08-25 00:47:12] [UserCheck.kt::checkUserId] Check user ID result: true for ID: 68aaeb781d9574e87d97adab
+[2025-08-25T00:47] [ChatScreen.kt::] INFO: 
+[2025-08-25T00:47] [Functions.kt::isUserLoggedIn] INFO: Loading...
+[2025-08-25T00:47] [Functions.kt::isUserLoggedIn] INFO: Login success for remembered: true, userId: 68aaeb781d9574e87d97adab
+[2025-08-25T00:47] [ApiFunctions.kt::checkUserId] INFO: ID encode string = "68aaeb781d9574e87d97adab"
+[2025-08-25T00:47] [ApiFunctions.kt::checkUserId] INFO: ID encodeToByteArray = 34,54,56,97,97,101,98,55,56,49,100,57,53,55,52,101,56,55,100,57,55,97,100,97,98,34
+[2025-08-25 00:47:19] [UserCheck.kt::checkUserId] Check user ID for : 68aaeb781d9574e87d97adab
+[2025-08-25 00:47:19] [MongoDB.kt::checkUserId] MongoDB.kt::checkUserId - checkUserId called for id: 68aaeb781d9574e87d97adab
+[2025-08-25 00:47:19] [MongoDB.kt::checkUserId] MongoDB.kt::checkUserId - Checked user ID: 68aaeb781d9574e87d97adab, found: 1
+[2025-08-25 00:47:19] [UserCheck.kt::checkUserId] Check user ID result: true for ID: 68aaeb781d9574e87d97adab
+[2025-08-25T00:47] [ChatScreen.kt::] INFO: 
+[2025-08-25T00:49] [Functions.kt::isUserLoggedIn] INFO: Loading...
+[2025-08-25T00:49] [Functions.kt::isUserLoggedIn] INFO: Login success for remembered: true, userId: 68aaeb781d9574e87d97adab
+[2025-08-25T00:49] [ApiFunctions.kt::checkUserId] INFO: ID encode string = "68aaeb781d9574e87d97adab"
+[2025-08-25T00:49] [ApiFunctions.kt::checkUserId] INFO: ID encodeToByteArray = 34,54,56,97,97,101,98,55,56,49,100,57,53,55,52,101,56,55,100,57,55,97,100,97,98,34
+[2025-08-25 00:49:20] [UserCheck.kt::checkUserId] Check user ID for : 68aaeb781d9574e87d97adab
+[2025-08-25 00:49:20] [MongoDB.kt::checkUserId] MongoDB.kt::checkUserId - checkUserId called for id: 68aaeb781d9574e87d97adab
+[2025-08-25 00:49:20] [MongoDB.kt::checkUserId] MongoDB.kt::checkUserId - Checked user ID: 68aaeb781d9574e87d97adab, found: 1
+[2025-08-25 00:49:20] [UserCheck.kt::checkUserId] Check user ID result: true for ID: 68aaeb781d9574e87d97adab
+[2025-08-25T00:49] [ChatScreen.kt::] INFO: 
+[2025-08-25T00:49] [Functions.kt::isUserLoggedIn] INFO: Loading...
+[2025-08-25T00:49] [Functions.kt::isUserLoggedIn] INFO: Login success for remembered: true, userId: 68a8dc01816a0d09ada8066f
+[2025-08-25T00:49] [ApiFunctions.kt::checkUserId] INFO: ID encode string = "68a8dc01816a0d09ada8066f"
+[2025-08-25T00:49] [ApiFunctions.kt::checkUserId] INFO: ID encodeToByteArray = 34,54,56,97,56,100,99,48,49,56,49,54,97,48,100,48,57,97,100,97,56,48,54,54,102,34
+[2025-08-25 00:49:31] [UserCheck.kt::checkUserId] Check user ID for : 68a8dc01816a0d09ada8066f
+[2025-08-25 00:49:31] [MongoDB.kt::checkUserId] MongoDB.kt::checkUserId - checkUserId called for id: 68a8dc01816a0d09ada8066f
+[2025-08-25 00:49:31] [MongoDB.kt::checkUserId] MongoDB.kt::checkUserId - Checked user ID: 68a8dc01816a0d09ada8066f, found: 1
+[2025-08-25 00:49:31] [UserCheck.kt::checkUserId] Check user ID result: true for ID: 68a8dc01816a0d09ada8066f
+[2025-08-25T00:49] [ChatScreen.kt::] INFO: [object Object]
+[2025-08-25T00:49] [ChatScreen.kt::] INFO: 
+[2025-08-25T00:49] [ChatScreen.kt::] INFO: [object Object]
+[2025-08-25T00:49] [ChatScreen.kt::] INFO: [object Object]
+[2025-08-25T00:50] [ChatScreen.kt::] INFO: [object Object]
+[2025-08-25T00:50] [ChatScreen.kt::] INFO: [object Object]
+[2025-08-25T00:50] [ChatScreen.kt::] INFO: [object Object]
+[2025-08-25T00:50] [ChatScreen.kt::] INFO: [object Object]
+[2025-08-25T00:50] [ChatScreen.kt::] INFO: [object Object]
+[2025-08-25T00:50] [ChatScreen.kt::] INFO: [object Object]
+[2025-08-25T00:50] [ChatScreen.kt::] INFO: [object Object]
+[2025-08-25T00:50] [ChatScreen.kt::] INFO: [object Object]
+[2025-08-25T00:53] [Functions.kt::isUserLoggedIn] INFO: Loading...
+[2025-08-25T00:53] [Functions.kt::isUserLoggedIn] INFO: Login success for remembered: true, userId: 68aaeb781d9574e87d97adab
+[2025-08-25T00:53] [ApiFunctions.kt::checkUserId] INFO: ID encode string = "68aaeb781d9574e87d97adab"
+[2025-08-25T00:53] [ApiFunctions.kt::checkUserId] INFO: ID encodeToByteArray = 34,54,56,97,97,101,98,55,56,49,100,57,53,55,52,101,56,55,100,57,55,97,100,97,98,34
+[2025-08-25 00:53:23] [UserCheck.kt::checkUserId] Check user ID for : 68aaeb781d9574e87d97adab
+[2025-08-25 00:53:23] [MongoDB.kt::checkUserId] MongoDB.kt::checkUserId - checkUserId called for id: 68aaeb781d9574e87d97adab
+[2025-08-25 00:53:23] [MongoDB.kt::checkUserId] MongoDB.kt::checkUserId - Checked user ID: 68aaeb781d9574e87d97adab, found: 1
+[2025-08-25 00:53:23] [UserCheck.kt::checkUserId] Check user ID result: true for ID: 68aaeb781d9574e87d97adab
+[2025-08-25T00:53] [ChatScreen.kt::] INFO: 
+[2025-08-25T00:53] [Functions.kt::isUserLoggedIn] INFO: Loading...
+[2025-08-25T00:53] [Functions.kt::isUserLoggedIn] INFO: Login success for remembered: true, userId: 68a8dc01816a0d09ada8066f
+[2025-08-25T00:53] [ApiFunctions.kt::checkUserId] INFO: ID encodeToByteArray = 34,54,56,97,56,100,99,48,49,56,49,54,97,48,100,48,57,97,100,97,56,48,54,54,102,34
+[2025-08-25T00:53] [ApiFunctions.kt::checkUserId] INFO: ID encode string = "68a8dc01816a0d09ada8066f"
+[2025-08-25 00:53:41] [UserCheck.kt::checkUserId] Check user ID for : 68a8dc01816a0d09ada8066f
+[2025-08-25 00:53:41] [MongoDB.kt::checkUserId] MongoDB.kt::checkUserId - checkUserId called for id: 68a8dc01816a0d09ada8066f
+[2025-08-25 00:53:41] [MongoDB.kt::checkUserId] MongoDB.kt::checkUserId - Checked user ID: 68a8dc01816a0d09ada8066f, found: 1
+[2025-08-25 00:53:41] [UserCheck.kt::checkUserId] Check user ID result: true for ID: 68a8dc01816a0d09ada8066f
+[2025-08-25T00:53] [ChatScreen.kt::] INFO: 
+[2025-08-25T00:53] [ChatScreen.kt::] INFO: [object Object]
+[2025-08-25T00:53] [ChatScreen.kt::] INFO: [object Object]
+[2025-08-25T00:53] [ChatScreen.kt::] INFO: [object Object]
+[2025-08-25T00:53] [ChatScreen.kt::] INFO: [object Object]

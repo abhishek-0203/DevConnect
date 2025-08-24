@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.kotlin.multiplatform)
     alias(libs.plugins.kobweb.library)
     id("com.android.library")
+    id("org.jetbrains.kotlin.plugin.serialization")
 }
 
 group = "com.example.shared"
