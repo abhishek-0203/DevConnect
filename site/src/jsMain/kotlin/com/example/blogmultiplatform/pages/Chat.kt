@@ -3,6 +3,7 @@ package com.example.blogmultiplatform.pages
 import androidx.compose.runtime.*
 import com.example.blogmultiplatform.pages.admin.CreateScreen
 import com.example.blogmultiplatform.util.isUserLoggedIn
+import com.example.blogmultiplatform.util.logInfo
 import com.example.shared.Message
 import com.varabyte.kobweb.compose.css.Overflow
 import com.varabyte.kobweb.compose.css.StyleVariable
@@ -71,7 +72,15 @@ fun ChatScreen() {
         Column(
             ChatBoxStyle.toModifier().height(80.percent).width(600.px).fontSize(22.px)
         ) {
+
+            LaunchedEffect(Unit) {
+                logInfo("", file = "ChatScreen.kt", function = "")
+            }
+
             messages.forEach { entry ->
+                LaunchedEffect(Unit) {
+                    logInfo("$entry", file = "ChatScreen.kt", function = "")
+                }
                 Text(entry.toChatLine())
                 Br()
             }
