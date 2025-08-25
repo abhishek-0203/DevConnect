@@ -12,7 +12,7 @@ object Constants {
 object Res {
     object Image {
         const val logo = "/logo.svg"
-        const val logoHome = "logo.svg"
+        const val logoHome = "logo.svg "
         const val laugh = "/laugh.png"
     }
     object Icon {

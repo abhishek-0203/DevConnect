@@ -39,6 +39,8 @@ import org.jetbrains.compose.web.css.Position
 import org.jetbrains.compose.web.css.px
 import com.varabyte.kobweb.compose.ui.modifiers.fontSize
 import com.varabyte.kobweb.compose.ui.modifiers.color
+import org.jetbrains.compose.web.dom.Img
+import org.jetbrains.compose.web.css.style
 
 @Page
 @Composable
@@ -98,6 +100,7 @@ fun HomePage() {
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
+
         if (overflowOpened) {
             OverflowSidePanel(
                 onMenuClose = { overflowOpened = false },

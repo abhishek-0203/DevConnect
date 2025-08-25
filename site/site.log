@@ -90,3 +90,299 @@
 [2025-08-25T00:53] [ChatScreen.kt::] INFO: [object Object]
 [2025-08-25T00:53] [ChatScreen.kt::] INFO: [object Object]
 [2025-08-25T00:53] [ChatScreen.kt::] INFO: [object Object]
+[2025-08-25T01:01] [Functions.kt::isUserLoggedIn] INFO: Loading...
+[2025-08-25T01:01] [Functions.kt::isUserLoggedIn] INFO: Login success for remembered: true, userId: 68a8dc01816a0d09ada8066f
+[2025-08-25T01:01] [ApiFunctions.kt::checkUserId] INFO: ID encode string = "68a8dc01816a0d09ada8066f"
+[2025-08-25T01:01] [ApiFunctions.kt::checkUserId] INFO: ID encodeToByteArray = 34,54,56,97,56,100,99,48,49,56,49,54,97,48,100,48,57,97,100,97,56,48,54,54,102,34
+[2025-08-25 01:01:30] [UserCheck.kt::checkUserId] Check user ID for : 68a8dc01816a0d09ada8066f
+[2025-08-25 01:01:30] [MongoDB.kt::checkUserId] MongoDB.kt::checkUserId - checkUserId called for id: 68a8dc01816a0d09ada8066f
+[2025-08-25 01:01:30] [MongoDB.kt::checkUserId] MongoDB.kt::checkUserId - Checked user ID: 68a8dc01816a0d09ada8066f, found: 1
+[2025-08-25 01:01:30] [UserCheck.kt::checkUserId] Check user ID result: true for ID: 68a8dc01816a0d09ada8066f
+[2025-08-25T01:01] [ChatScreen.kt::] INFO: 
+[2025-08-25T01:01] [Functions.kt::isUserLoggedIn] INFO: Loading...
+[2025-08-25T01:01] [Functions.kt::isUserLoggedIn] INFO: Login success for remembered: true, userId: 68aaeb781d9574e87d97adab
+[2025-08-25T01:01] [ApiFunctions.kt::checkUserId] INFO: ID encode string = "68aaeb781d9574e87d97adab"
+[2025-08-25T01:01] [ApiFunctions.kt::checkUserId] INFO: ID encodeToByteArray = 34,54,56,97,97,101,98,55,56,49,100,57,53,55,52,101,56,55,100,57,55,97,100,97,98,34
+[2025-08-25 01:01:31] [UserCheck.kt::checkUserId] Check user ID for : 68aaeb781d9574e87d97adab
+[2025-08-25 01:01:31] [MongoDB.kt::checkUserId] MongoDB.kt::checkUserId - checkUserId called for id: 68aaeb781d9574e87d97adab
+[2025-08-25 01:01:31] [MongoDB.kt::checkUserId] MongoDB.kt::checkUserId - Checked user ID: 68aaeb781d9574e87d97adab, found: 1
+[2025-08-25 01:01:31] [UserCheck.kt::checkUserId] Check user ID result: true for ID: 68aaeb781d9574e87d97adab
+[2025-08-25T01:01] [ChatScreen.kt::] INFO: 
+[2025-08-25T01:05] [Functions.kt::isUserLoggedIn] INFO: Loading...
+[2025-08-25T01:05] [Functions.kt::isUserLoggedIn] INFO: Login success for remembered: true, userId: 68a8dc01816a0d09ada8066f
+[2025-08-25T01:05] [ApiFunctions.kt::checkUserId] INFO: ID encode string = "68a8dc01816a0d09ada8066f"
+[2025-08-25 01:05:35] [UserCheck.kt::checkUserId] Check user ID for : 68a8dc01816a0d09ada8066f
+[2025-08-25 01:05:35] [MongoDB.kt::checkUserId] MongoDB.kt::checkUserId - checkUserId called for id: 68a8dc01816a0d09ada8066f
+[2025-08-25T01:05] [ApiFunctions.kt::checkUserId] INFO: ID encodeToByteArray = 34,54,56,97,56,100,99,48,49,56,49,54,97,48,100,48,57,97,100,97,56,48,54,54,102,34
+[2025-08-25 01:05:35] [MongoDB.kt::checkUserId] MongoDB.kt::checkUserId - Checked user ID: 68a8dc01816a0d09ada8066f, found: 1
+[2025-08-25 01:05:35] [UserCheck.kt::checkUserId] Check user ID result: true for ID: 68a8dc01816a0d09ada8066f
+[2025-08-25T01:05] [Functions.kt::isUserLoggedIn] INFO: Loading...
+[2025-08-25T01:05] [Functions.kt::isUserLoggedIn] INFO: Login success for remembered: true, userId: 68aaeb781d9574e87d97adab
+[2025-08-25T01:05] [ApiFunctions.kt::checkUserId] INFO: ID encode string = "68aaeb781d9574e87d97adab"
+[2025-08-25 01:05:35] [UserCheck.kt::checkUserId] Check user ID for : 68aaeb781d9574e87d97adab
+[2025-08-25T01:05] [ApiFunctions.kt::checkUserId] INFO: ID encodeToByteArray = 34,54,56,97,97,101,98,55,56,49,100,57,53,55,52,101,56,55,100,57,55,97,100,97,98,34
+[2025-08-25 01:05:35] [MongoDB.kt::checkUserId] MongoDB.kt::checkUserId - checkUserId called for id: 68aaeb781d9574e87d97adab
+[2025-08-25 01:05:35] [MongoDB.kt::checkUserId] MongoDB.kt::checkUserId - Checked user ID: 68aaeb781d9574e87d97adab, found: 1
+[2025-08-25 01:05:35] [UserCheck.kt::checkUserId] Check user ID result: true for ID: 68aaeb781d9574e87d97adab
+[2025-08-25T01:08] [Functions.kt::isUserLoggedIn] INFO: Loading...
+[2025-08-25T01:08] [Functions.kt::isUserLoggedIn] INFO: Login success for remembered: true, userId: 68a8dc01816a0d09ada8066f
+[2025-08-25T01:08] [ApiFunctions.kt::checkUserId] INFO: ID encode string = "68a8dc01816a0d09ada8066f"
+[2025-08-25T01:08] [ApiFunctions.kt::checkUserId] INFO: ID encodeToByteArray = 34,54,56,97,56,100,99,48,49,56,49,54,97,48,100,48,57,97,100,97,56,48,54,54,102,34
+[2025-08-25 01:08:31] [UserCheck.kt::checkUserId] Check user ID for : 68a8dc01816a0d09ada8066f
+[2025-08-25 01:08:31] [MongoDB.kt::checkUserId] MongoDB.kt::checkUserId - checkUserId called for id: 68a8dc01816a0d09ada8066f
+[2025-08-25 01:08:31] [MongoDB.kt::checkUserId] MongoDB.kt::checkUserId - Checked user ID: 68a8dc01816a0d09ada8066f, found: 1
+[2025-08-25 01:08:31] [UserCheck.kt::checkUserId] Check user ID result: true for ID: 68a8dc01816a0d09ada8066f
+[2025-08-25T01:08] [Functions.kt::isUserLoggedIn] INFO: Loading...
+[2025-08-25T01:08] [Functions.kt::isUserLoggedIn] INFO: Login success for remembered: true, userId: 68aaeb781d9574e87d97adab
+[2025-08-25T01:08] [ApiFunctions.kt::checkUserId] INFO: ID encodeToByteArray = 34,54,56,97,97,101,98,55,56,49,100,57,53,55,52,101,56,55,100,57,55,97,100,97,98,34
+[2025-08-25T01:08] [ApiFunctions.kt::checkUserId] INFO: ID encode string = "68aaeb781d9574e87d97adab"
+[2025-08-25 01:08:31] [UserCheck.kt::checkUserId] Check user ID for : 68aaeb781d9574e87d97adab
+[2025-08-25 01:08:31] [MongoDB.kt::checkUserId] MongoDB.kt::checkUserId - checkUserId called for id: 68aaeb781d9574e87d97adab
+[2025-08-25 01:08:31] [MongoDB.kt::checkUserId] MongoDB.kt::checkUserId - Checked user ID: 68aaeb781d9574e87d97adab, found: 1
+[2025-08-25 01:08:31] [UserCheck.kt::checkUserId] Check user ID result: true for ID: 68aaeb781d9574e87d97adab
+[2025-08-25 07:43:58] Logger initialized. Writing to /home/abhishek/AndroidStudioProjects/BlogMultiplatform/site/site.log
+[2025-08-25 07:44:52] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts called
+[2025-08-25 07:44:53] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts result count: 1
+[2025-08-25 07:44:53] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts called, skip: 0
+[2025-08-25 07:44:53] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts result count: 1
+[2025-08-25 07:44:53] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts called
+[2025-08-25 07:44:53] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts result count: 1
+[2025-08-25 07:44:53] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts called, skip: 0
+[2025-08-25 07:44:53] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts result count: 1
+[2025-08-25 07:52:29] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts called
+[2025-08-25 07:52:29] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts result count: 1
+[2025-08-25 07:52:29] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts called, skip: 0
+[2025-08-25 07:52:29] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts result count: 1
+[2025-08-25 07:52:29] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts called
+[2025-08-25 07:52:29] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts result count: 1
+[2025-08-25 07:52:29] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts called, skip: 0
+[2025-08-25 07:52:29] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts result count: 1
+[2025-08-25 07:52:36] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts called
+[2025-08-25 07:52:36] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts result count: 1
+[2025-08-25 07:52:36] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts called, skip: 0
+[2025-08-25 07:52:36] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts result count: 1
+[2025-08-25 07:52:36] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts called
+[2025-08-25 07:52:36] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts result count: 1
+[2025-08-25 07:52:36] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts called, skip: 0
+[2025-08-25 07:52:36] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts result count: 1
+[2025-08-25 07:55:09] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts called
+[2025-08-25 07:55:09] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts result count: 1
+[2025-08-25 07:55:09] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts called, skip: 0
+[2025-08-25 07:55:09] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts result count: 1
+[2025-08-25 07:55:09] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts called
+[2025-08-25 07:55:09] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts result count: 1
+[2025-08-25 07:55:09] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts called, skip: 0
+[2025-08-25 07:55:09] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts result count: 1
+[2025-08-25 08:04:17] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts called
+[2025-08-25 08:04:17] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts result count: 1
+[2025-08-25 08:04:17] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts called, skip: 0
+[2025-08-25 08:04:17] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts result count: 1
+[2025-08-25 08:04:17] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts called
+[2025-08-25 08:04:17] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts result count: 1
+[2025-08-25 08:04:17] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts called, skip: 0
+[2025-08-25 08:04:17] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts result count: 1
+[2025-08-25 08:04:57] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts called
+[2025-08-25 08:04:57] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts result count: 1
+[2025-08-25 08:04:57] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts called, skip: 0
+[2025-08-25 08:04:57] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts result count: 1
+[2025-08-25 08:04:57] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts called
+[2025-08-25 08:04:57] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts result count: 1
+[2025-08-25 08:04:57] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts called, skip: 0
+[2025-08-25 08:04:57] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts result count: 1
+[2025-08-25 08:05:03] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts called
+[2025-08-25 08:05:03] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts result count: 1
+[2025-08-25 08:05:03] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts called, skip: 0
+[2025-08-25 08:05:03] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts result count: 1
+[2025-08-25 08:05:03] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts called
+[2025-08-25 08:05:03] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts result count: 1
+[2025-08-25 08:05:03] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts called, skip: 0
+[2025-08-25 08:05:03] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts result count: 1
+[2025-08-25 08:05:41] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts called
+[2025-08-25 08:05:41] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts result count: 1
+[2025-08-25 08:05:41] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts called, skip: 0
+[2025-08-25 08:05:41] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts result count: 1
+[2025-08-25 08:05:41] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts called
+[2025-08-25 08:05:41] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts result count: 1
+[2025-08-25 08:05:41] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts called, skip: 0
+[2025-08-25 08:05:41] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts result count: 1
+[2025-08-25 08:05:54] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts called
+[2025-08-25 08:05:54] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts result count: 1
+[2025-08-25 08:05:54] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts called, skip: 0
+[2025-08-25 08:05:54] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts result count: 1
+[2025-08-25 08:05:54] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts called
+[2025-08-25 08:05:54] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts result count: 1
+[2025-08-25 08:05:54] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts called, skip: 0
+[2025-08-25 08:05:54] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts result count: 1
+[2025-08-25 08:05:56] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts called
+[2025-08-25 08:05:56] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts result count: 1
+[2025-08-25 08:05:56] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts called, skip: 0
+[2025-08-25 08:05:56] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts result count: 1
+[2025-08-25 08:05:56] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts called
+[2025-08-25 08:05:56] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts result count: 1
+[2025-08-25 08:05:56] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts called, skip: 0
+[2025-08-25 08:05:56] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts result count: 1
+[2025-08-25 08:07:23] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts called
+[2025-08-25 08:07:23] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts result count: 1
+[2025-08-25 08:07:23] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts called, skip: 0
+[2025-08-25 08:07:23] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts result count: 1
+[2025-08-25 08:07:23] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts called
+[2025-08-25 08:07:23] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts result count: 1
+[2025-08-25 08:07:23] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts called, skip: 0
+[2025-08-25 08:07:23] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts result count: 1
+[2025-08-25 08:07:45] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts called
+[2025-08-25 08:07:45] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts result count: 1
+[2025-08-25 08:07:45] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts called, skip: 0
+[2025-08-25 08:07:45] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts result count: 1
+[2025-08-25 08:07:45] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts called
+[2025-08-25 08:07:45] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts result count: 1
+[2025-08-25 08:07:45] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts called, skip: 0
+[2025-08-25 08:07:45] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts result count: 1
+[2025-08-25 08:07:50] [MongoDB.kt::searchPostsByCategory] MongoDB.kt::searchPostsByCategory - searchPostsByCategory called, category: Technology, skip: 0
+[2025-08-25 08:07:50] [MongoDB.kt::searchPostsByCategory] MongoDB.kt::searchPostsByCategory - searchPostsByCategory result count: 1
+[2025-08-25 08:07:51] [MongoDB.kt::searchPostsByCategory] MongoDB.kt::searchPostsByCategory - searchPostsByCategory called, category: Programming, skip: 0
+[2025-08-25 08:07:51] [MongoDB.kt::searchPostsByCategory] MongoDB.kt::searchPostsByCategory - searchPostsByCategory result count: 3
+[2025-08-25 08:07:52] [MongoDB.kt::searchPostsByCategory] MongoDB.kt::searchPostsByCategory - searchPostsByCategory called, category: Design, skip: 0
+[2025-08-25 08:07:52] [MongoDB.kt::searchPostsByCategory] MongoDB.kt::searchPostsByCategory - searchPostsByCategory result count: 0
+[2025-08-25 08:07:53] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts called
+[2025-08-25 08:07:53] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts result count: 1
+[2025-08-25 08:07:53] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts called, skip: 0
+[2025-08-25 08:07:53] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts result count: 1
+[2025-08-25 08:07:53] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts called
+[2025-08-25 08:07:53] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts result count: 1
+[2025-08-25 08:07:53] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts called, skip: 0
+[2025-08-25 08:07:53] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts result count: 1
+[2025-08-25 08:55:29] Logger initialized. Writing to /home/abhishek/AndroidStudioProjects/BlogMultiplatform/site/site.log
+[2025-08-25 08:55:35] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts called
+[2025-08-25 08:55:36] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts result count: 1
+[2025-08-25 08:55:36] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts called, skip: 0
+[2025-08-25 08:55:36] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts result count: 1
+[2025-08-25 08:55:36] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts called
+[2025-08-25 08:55:36] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts result count: 1
+[2025-08-25 08:55:36] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts called, skip: 0
+[2025-08-25 08:55:36] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts result count: 1
+[2025-08-25 08:55:39] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts called
+[2025-08-25 08:55:39] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts result count: 1
+[2025-08-25 08:55:39] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts called, skip: 0
+[2025-08-25 08:55:39] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts result count: 1
+[2025-08-25 08:55:39] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts called
+[2025-08-25 08:55:39] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts result count: 1
+[2025-08-25 08:55:39] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts called, skip: 0
+[2025-08-25 08:55:39] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts result count: 1
+[2025-08-25 08:56:18] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts called
+[2025-08-25 08:56:18] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts result count: 1
+[2025-08-25 08:56:18] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts called, skip: 0
+[2025-08-25 08:56:18] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts result count: 1
+[2025-08-25 08:56:18] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts called
+[2025-08-25 08:56:18] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts result count: 1
+[2025-08-25 08:56:18] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts called, skip: 0
+[2025-08-25 08:56:18] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts result count: 1
+[2025-08-25 08:58:44] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts called
+[2025-08-25 08:58:44] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts result count: 1
+[2025-08-25 08:58:44] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts called, skip: 0
+[2025-08-25 08:58:44] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts result count: 1
+[2025-08-25 08:58:44] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts called
+[2025-08-25 08:58:44] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts result count: 1
+[2025-08-25 08:58:44] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts called, skip: 0
+[2025-08-25 08:58:44] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts result count: 1
+[2025-08-25 08:59:14] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts called
+[2025-08-25 08:59:14] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts result count: 1
+[2025-08-25 08:59:14] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts called, skip: 0
+[2025-08-25 08:59:14] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts result count: 1
+[2025-08-25 08:59:14] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts called
+[2025-08-25 08:59:14] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts result count: 1
+[2025-08-25 08:59:14] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts called, skip: 0
+[2025-08-25 08:59:14] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts result count: 1
+[2025-08-25 08:59:47] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts called
+[2025-08-25 08:59:47] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts result count: 1
+[2025-08-25 08:59:47] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts called, skip: 0
+[2025-08-25 08:59:47] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts result count: 1
+[2025-08-25 08:59:47] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts called
+[2025-08-25 08:59:47] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts result count: 1
+[2025-08-25 08:59:47] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts called, skip: 0
+[2025-08-25 08:59:47] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts result count: 1
+[2025-08-25 08:59:59] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts called
+[2025-08-25 08:59:59] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts result count: 1
+[2025-08-25 08:59:59] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts called, skip: 0
+[2025-08-25 08:59:59] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts result count: 1
+[2025-08-25 08:59:59] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts called
+[2025-08-25 08:59:59] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts result count: 1
+[2025-08-25 08:59:59] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts called, skip: 0
+[2025-08-25 08:59:59] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts result count: 1
+[2025-08-25 09:00:05] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts called
+[2025-08-25 09:00:05] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts result count: 1
+[2025-08-25 09:00:05] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts called, skip: 0
+[2025-08-25 09:00:05] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts result count: 1
+[2025-08-25 09:00:05] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts called
+[2025-08-25 09:00:05] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts result count: 1
+[2025-08-25 09:00:05] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts called, skip: 0
+[2025-08-25 09:00:05] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts result count: 1
+[2025-08-25 09:00:48] [MongoDB.kt::searchPostsByTittle] MongoDB.kt::searchPostsByTittle - searchPostsByTittle called, query: df, skip: 0
+[2025-08-25 09:00:48] [MongoDB.kt::searchPostsByTittle] MongoDB.kt::searchPostsByTittle - searchPostsByTittle result count: 1
+[2025-08-25 09:00:58] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts called
+[2025-08-25 09:00:58] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts result count: 1
+[2025-08-25 09:00:58] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts called, skip: 0
+[2025-08-25 09:00:58] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts result count: 1
+[2025-08-25 09:00:58] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts called
+[2025-08-25 09:00:58] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts result count: 1
+[2025-08-25 09:00:58] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts called, skip: 0
+[2025-08-25 09:00:59] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts result count: 1
+[2025-08-25 09:01:03] [MongoDB.kt::searchPostsByTittle] MongoDB.kt::searchPostsByTittle - searchPostsByTittle called, query: main, skip: 0
+[2025-08-25 09:01:03] [MongoDB.kt::searchPostsByTittle] MongoDB.kt::searchPostsByTittle - searchPostsByTittle result count: 0
+[2025-08-25 09:01:08] [MongoDB.kt::searchPostsByTittle] MongoDB.kt::searchPostsByTittle - searchPostsByTittle called, query: the main, skip: 0
+[2025-08-25 09:01:08] [MongoDB.kt::searchPostsByTittle] MongoDB.kt::searchPostsByTittle - searchPostsByTittle result count: 0
+[2025-08-25 09:01:13] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts called
+[2025-08-25 09:01:13] [MongoDB.kt::readMainPosts] MongoDB.kt::readMainPosts - readMainPosts result count: 1
+[2025-08-25 09:01:13] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts called, skip: 0
+[2025-08-25 09:01:13] [MongoDB.kt::readLatestPosts] MongoDB.kt::readLatestPosts - readLatestPosts result count: 1
+[2025-08-25 09:01:13] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts called
+[2025-08-25 09:01:14] [MongoDB.kt::readSponsoredPosts] MongoDB.kt::readSponsoredPosts - readSponsoredPosts result count: 1
+[2025-08-25 09:01:14] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts called, skip: 0
+[2025-08-25 09:01:14] [MongoDB.kt::readPopularPosts] MongoDB.kt::readPopularPosts - readPopularPosts result count: 1
+[2025-08-25 09:01:30] [UserCheck.kt::checkUserId] Check user ID for : 68aaeb781d9574e87d97adab
+[2025-08-25 09:01:30] [MongoDB.kt::checkUserId] MongoDB.kt::checkUserId - checkUserId called for id: 68aaeb781d9574e87d97adab
+[2025-08-25T09:01] [ApiFunctions.kt::checkUserId] INFO: ID encode string = "68aaeb781d9574e87d97adab"
+[2025-08-25T09:01] [Functions.kt::isUserLoggedIn] INFO: Login success for remembered: true, userId: 68aaeb781d9574e87d97adab
+[2025-08-25T09:01] [ApiFunctions.kt::checkUserId] INFO: ID encodeToByteArray = 34,54,56,97,97,101,98,55,56,49,100,57,53,55,52,101,56,55,100,57,55,97,100,97,98,34
+[2025-08-25T09:01] [Functions.kt::isUserLoggedIn] INFO: Loading...
+[2025-08-25 09:01:30] [MongoDB.kt::checkUserId] MongoDB.kt::checkUserId - Checked user ID: 68aaeb781d9574e87d97adab, found: 1
+[2025-08-25 09:01:30] [UserCheck.kt::checkUserId] Check user ID result: true for ID: 68aaeb781d9574e87d97adab
+[2025-08-25T09:02] [Functions.kt::isUserLoggedIn] INFO: Loading...
+[2025-08-25T09:02] [Functions.kt::isUserLoggedIn] INFO: Login success for remembered: true, userId: 68a8dc01816a0d09ada8066f
+[2025-08-25T09:02] [ApiFunctions.kt::checkUserId] INFO: ID encode string = "68a8dc01816a0d09ada8066f"
+[2025-08-25T09:02] [ApiFunctions.kt::checkUserId] INFO: ID encodeToByteArray = 34,54,56,97,56,100,99,48,49,56,49,54,97,48,100,48,57,97,100,97,56,48,54,54,102,34
+[2025-08-25 09:02:19] [UserCheck.kt::checkUserId] Check user ID for : 68a8dc01816a0d09ada8066f
+[2025-08-25 09:02:19] [MongoDB.kt::checkUserId] MongoDB.kt::checkUserId - checkUserId called for id: 68a8dc01816a0d09ada8066f
+[2025-08-25 09:02:19] [MongoDB.kt::checkUserId] MongoDB.kt::checkUserId - Checked user ID: 68a8dc01816a0d09ada8066f, found: 1
+[2025-08-25 09:02:19] [UserCheck.kt::checkUserId] Check user ID result: true for ID: 68a8dc01816a0d09ada8066f
+[2025-08-25T09:14] [Functions.kt::isUserLoggedIn] INFO: Loading...
+[2025-08-25T09:14] [Functions.kt::isUserLoggedIn] INFO: Login success for remembered: true, userId: 68aaeb781d9574e87d97adab
+[2025-08-25T09:14] [ApiFunctions.kt::checkUserId] INFO: ID encode string = "68aaeb781d9574e87d97adab"
+[2025-08-25T09:14] [ApiFunctions.kt::checkUserId] INFO: ID encodeToByteArray = 34,54,56,97,97,101,98,55,56,49,100,57,53,55,52,101,56,55,100,57,55,97,100,97,98,34
+[2025-08-25 09:14:12] [UserCheck.kt::checkUserId] Check user ID for : 68aaeb781d9574e87d97adab
+[2025-08-25 09:14:12] [MongoDB.kt::checkUserId] MongoDB.kt::checkUserId - checkUserId called for id: 68aaeb781d9574e87d97adab
+[2025-08-25 09:14:12] [MongoDB.kt::checkUserId] MongoDB.kt::checkUserId - Checked user ID: 68aaeb781d9574e87d97adab, found: 1
+[2025-08-25 09:14:12] [UserCheck.kt::checkUserId] Check user ID result: true for ID: 68aaeb781d9574e87d97adab
+[2025-08-25T09:16] [Functions.kt::isUserLoggedIn] INFO: Loading...
+[2025-08-25T09:16] [Functions.kt::isUserLoggedIn] INFO: Login success for remembered: true, userId: 68a8dc01816a0d09ada8066f
+[2025-08-25T09:16] [ApiFunctions.kt::checkUserId] INFO: ID encode string = "68a8dc01816a0d09ada8066f"
+[2025-08-25T09:16] [ApiFunctions.kt::checkUserId] INFO: ID encodeToByteArray = 34,54,56,97,56,100,99,48,49,56,49,54,97,48,100,48,57,97,100,97,56,48,54,54,102,34
+[2025-08-25 09:16:35] [UserCheck.kt::checkUserId] Check user ID for : 68a8dc01816a0d09ada8066f
+[2025-08-25 09:16:35] [MongoDB.kt::checkUserId] MongoDB.kt::checkUserId - checkUserId called for id: 68a8dc01816a0d09ada8066f
+[2025-08-25 09:16:35] [MongoDB.kt::checkUserId] MongoDB.kt::checkUserId - Checked user ID: 68a8dc01816a0d09ada8066f, found: 1
+[2025-08-25 09:16:35] [UserCheck.kt::checkUserId] Check user ID result: true for ID: 68a8dc01816a0d09ada8066f
+[2025-08-25T09:19] [Functions.kt::isUserLoggedIn] INFO: Loading...
+[2025-08-25T09:19] [Functions.kt::isUserLoggedIn] INFO: Login success for remembered: true, userId: 68aaeb781d9574e87d97adab
+[2025-08-25T09:19] [ApiFunctions.kt::checkUserId] INFO: ID encode string = "68aaeb781d9574e87d97adab"
+[2025-08-25T09:19] [ApiFunctions.kt::checkUserId] INFO: ID encodeToByteArray = 34,54,56,97,97,101,98,55,56,49,100,57,53,55,52,101,56,55,100,57,55,97,100,97,98,34
+[2025-08-25 09:19:29] [UserCheck.kt::checkUserId] Check user ID for : 68aaeb781d9574e87d97adab
+[2025-08-25 09:19:29] [MongoDB.kt::checkUserId] MongoDB.kt::checkUserId - checkUserId called for id: 68aaeb781d9574e87d97adab
+[2025-08-25 09:19:29] [MongoDB.kt::checkUserId] MongoDB.kt::checkUserId - Checked user ID: 68aaeb781d9574e87d97adab, found: 1
+[2025-08-25 09:19:29] [UserCheck.kt::checkUserId] Check user ID result: true for ID: 68aaeb781d9574e87d97adab
+[2025-08-25T09:19] [Functions.kt::isUserLoggedIn] INFO: Loading...
+[2025-08-25T09:19] [Functions.kt::isUserLoggedIn] INFO: Login success for remembered: true, userId: 68a8dc01816a0d09ada8066f
+[2025-08-25T09:19] [ApiFunctions.kt::checkUserId] INFO: ID encode string = "68a8dc01816a0d09ada8066f"
+[2025-08-25T09:19] [ApiFunctions.kt::checkUserId] INFO: ID encodeToByteArray = 34,54,56,97,56,100,99,48,49,56,49,54,97,48,100,48,57,97,100,97,56,48,54,54,102,34
+[2025-08-25 09:19:44] [UserCheck.kt::checkUserId] Check user ID for : 68a8dc01816a0d09ada8066f
+[2025-08-25 09:19:44] [MongoDB.kt::checkUserId] MongoDB.kt::checkUserId - checkUserId called for id: 68a8dc01816a0d09ada8066f
+[2025-08-25 09:19:44] [MongoDB.kt::checkUserId] MongoDB.kt::checkUserId - Checked user ID: 68a8dc01816a0d09ada8066f, found: 1
+[2025-08-25 09:19:44] [UserCheck.kt::checkUserId] Check user ID result: true for ID: 68a8dc01816a0d09ada8066f
