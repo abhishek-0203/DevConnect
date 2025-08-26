@@ -99,14 +99,12 @@ fun HomeContent(randomJoke: RandomJoke?) {
             .padding(left = if (breakpoint > Breakpoint.MD) SIDE_PANEL_WIDTH.px else 0.px),
         contentAlignment = Alignment.Center
     ) {
-        if (randomJoke != null) {
-            Column(
-                modifier = Modifier
-                    .fillMaxSize()
-                    .padding(topBottom = 50.px),
-                verticalArrangement = Arrangement.Center,
-                horizontalAlignment = Alignment.CenterHorizontally
-            ) {
+        Column(
+            modifier = Modifier.fillMaxSize().padding(topBottom = 50.px),
+            verticalArrangement = Arrangement.Top,
+            horizontalAlignment = Alignment.CenterHorizontally
+        ) {
+            if (randomJoke != null) {
                 if (randomJoke.id != -1) {
                     Image(
                         modifier = Modifier
@@ -151,9 +149,9 @@ fun HomeContent(randomJoke: RandomJoke?) {
                         text = randomJoke.joke
                     )
                 }
+            } else {
+                LoadingIndicator()
             }
-        } else {
-            LoadingIndicator()
         }
     }
 }
