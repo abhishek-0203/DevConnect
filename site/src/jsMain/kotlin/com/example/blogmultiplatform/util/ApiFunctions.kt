@@ -258,13 +258,13 @@ suspend fun subscribeToNewsletter(newsletter: Newsletter): String {
 }
 
 @kotlinx.serialization.Serializable
-data class RegisterRequest(val username: String, val password: String, val email: String, val role: String)
+data class RegisterRequest(val username: String, val password: String, val role: String)
 @kotlinx.serialization.Serializable
 data class RegisterResponse(val success: Boolean, val message: String)
 
-suspend fun registerUser(username: String, password: String, email: String, role: String): Pair<Boolean, String> {
+suspend fun registerUser(username: String, password: String, role: String): Pair<Boolean, String> {
     return try {
-        val req = RegisterRequest(username, password, email, role)
+        val req = RegisterRequest(username, password, role)
         val response = window.api.tryPost(
             apiPath = "register",
             body = Json.encodeToString(req).encodeToByteArray()

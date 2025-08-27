@@ -7,8 +7,7 @@ actual data class User(
     actual val _id: String = "",
     actual val username: String = "",
     actual val password: String = "",
-    actual val role: String = "",
-    actual val email: String = ""
+    actual val role: String = ""
 )
 
 @Serializable

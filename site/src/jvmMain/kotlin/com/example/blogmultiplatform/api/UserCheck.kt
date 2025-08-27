@@ -78,7 +78,7 @@ suspend fun checkUserId(context: ApiContext) {
 data class ErrorResponse(val error: String)
 
 @Serializable
-data class RegisterRequest(val username: String, val password: String, val email: String, val role: String)
+data class RegisterRequest(val username: String, val password: String, val role: String)
 
 @Serializable
 data class RegisterResponse(val success: Boolean, val message: String)
@@ -94,14 +94,14 @@ suspend fun registerUser(context: ApiContext) {
         }
         val mongo = context.data.getValue<MongoDB>()
         val mongoImpl = mongo as com.example.blogmultiplatform.data.MongoDB
-        // Check if username or email already exists
-        val exists = mongoImpl.isUserOrEmailExists(req.username, req.email)
+        // Check if username already exists
+        val exists = mongoImpl.isUserOrEmailExists(req.username)
         if (exists) {
-            context.res.setBodyText(Json.encodeToString(RegisterResponse(false, "Username or email already exists.")))
+            context.res.setBodyText(Json.encodeToString(RegisterResponse(false, "Username already exists.")))
             return
         }
         // Insert user
-        val success = mongoImpl.insertUser(req.username, req.password, req.email, req.role)
+        val success = mongoImpl.insertUser(req.username, req.password, req.role)
         if (success) {
             context.res.setBodyText(Json.encodeToString(RegisterResponse(true, "Account created successfully.")))
         } else {

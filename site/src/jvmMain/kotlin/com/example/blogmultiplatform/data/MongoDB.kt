@@ -256,29 +256,33 @@ class MongoDB(private val context: InitApiContext) : MongoRepository {
         }
     }
 
-    suspend fun isUserOrEmailExists(username: String, email: String): Boolean {
+    suspend fun isUserOrEmailExists(username: String): Boolean {
         return try {
             val userExists = userCollection.countDocuments(Filters.eq("username", username)) > 0
-            val emailExists = userCollection.countDocuments(Filters.eq("email", email)) > 0
-            userExists || emailExists
+            userExists
         } catch (e: Exception) {
             logger.logError("MongoDB.kt::isUserOrEmailExists - error: ${e.message}")
             false
         }
     }
 
-    suspend fun insertUser(username: String, password: String, email: String, role: String): Boolean {
+    suspend fun insertUser(username: String, password: String, role: String): Boolean {
         return try {
+            val objectId = ObjectId() // Generate new ObjectId
             val user = User(
-                _id = ObjectId().toHexString(),
+                _id = objectId.toHexString(), // Store as hex string for consistency with login
                 username = username,
                 password = password,
-                role = role,
-                email = email
+                role = role
             )
-            val result = userCollection.insertOne(user).wasAcknowledged()
-            logger.logInfo("MongoDB.kt::insertUser - Inserted user: $username, result: $result")
-            result
+            val doc = org.bson.Document()
+                .append("_id", objectId)
+                .append("username", username)
+                .append("password", password)
+                .append("role", role)
+            val result = userCollection.withDocumentClass(org.bson.Document::class.java).insertOne(doc)
+            logger.logInfo("MongoDB.kt::insertUser - Inserted user: $username, result: ${result.wasAcknowledged()}")
+            result.wasAcknowledged()
         } catch (e: Exception) {
             logger.logError("MongoDB.kt::insertUser - error: ${e.message}")
             false

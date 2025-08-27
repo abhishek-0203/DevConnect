@@ -63,7 +63,6 @@ fun SignUpScreen() {
     var username by remember { mutableStateOf("") }
     var password by remember { mutableStateOf("") }
     var confirmPassword by remember { mutableStateOf("") }
-    var email by remember { mutableStateOf("") }
     var isDeveloper by remember { mutableStateOf(false) }
     var isClient by remember { mutableStateOf(false) }
 
@@ -101,22 +100,6 @@ fun SignUpScreen() {
                         onInput { username = it.value }
                     }
             )
-//            Input(
-//                type = InputType.Email,
-//                attrs = LoginInputStyle.toModifier()
-//                    .margin(bottom = 12.px)
-//                    .width(350.px)
-//                    .height(54.px)
-//                    .padding(leftRight = 20.px)
-//                    .backgroundColor(Colors.White)
-//                    .fontFamily(FONT_FAMILY)
-//                    .fontSize(14.px)
-//                    .outline(width = 0.px, style = LineStyle.None, color = Colors.Transparent)
-//                    .toAttrs {
-//                        attr("placeholder", "Email")
-//                        onInput { email = it.value }
-//                    }
-//            )
             Input(
                 type = InputType.Password,
                 attrs = LoginInputStyle.toModifier()
@@ -199,7 +182,7 @@ fun SignUpScreen() {
                             scope.launch {
                                 errorText = " "
                                 successText = ""
-                                if (username.isBlank() || password.isBlank() || confirmPassword.isBlank() || email.isBlank()) {
+                                if (username.isBlank() || password.isBlank() || confirmPassword.isBlank()) {
                                     errorText = "All fields are required."
                                     return@launch
                                 }
@@ -212,7 +195,7 @@ fun SignUpScreen() {
                                     return@launch
                                 }
                                 val role = if (isDeveloper) Type.Developer.type else Type.Client.type
-                                val (success, message) = registerUser(username, password, email, role)
+                                val (success, message) = registerUser(username, password, role)
                                 if (success) {
                                     successText = message
                                     delay(2000)
