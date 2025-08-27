@@ -10,6 +10,8 @@ import com.example.shared.JsTheme
 import com.example.blogmultiplatform.models.User
 import com.example.blogmultiplatform.models.UserWithoutPassword
 import com.example.blogmultiplatform.navigation.Screen
+import com.example.blogmultiplatform.navigation.Screen.SignUp
+import com.example.blogmultiplatform.navigation.Type
 import com.example.blogmultiplatform.styles.LoginInputStyle
 import com.example.blogmultiplatform.util.Constants.FONT_FAMILY
 import com.example.blogmultiplatform.util.Id
@@ -25,12 +27,14 @@ import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
+import com.varabyte.kobweb.compose.foundation.layout.Row
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.core.Page
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.backgroundColor
 import com.varabyte.kobweb.compose.ui.modifiers.borderRadius
+import com.varabyte.kobweb.compose.ui.modifiers.boxShadow
 import com.varabyte.kobweb.compose.ui.modifiers.color
 import com.varabyte.kobweb.compose.ui.modifiers.cursor
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxSize
@@ -39,6 +43,7 @@ import com.varabyte.kobweb.compose.ui.modifiers.fontSize
 import com.varabyte.kobweb.compose.ui.modifiers.fontWeight
 import com.varabyte.kobweb.compose.ui.modifiers.height
 import com.varabyte.kobweb.compose.ui.modifiers.id
+import com.varabyte.kobweb.compose.ui.modifiers.letterSpacing
 import com.varabyte.kobweb.compose.ui.modifiers.margin
 import com.varabyte.kobweb.compose.ui.modifiers.onClick
 import com.varabyte.kobweb.compose.ui.modifiers.outline
@@ -68,6 +73,8 @@ fun LoginScreen() {
     val scope = rememberCoroutineScope()
     val context = rememberPageContext()
     var errorText by remember { mutableStateOf(" ") }
+    var isDeveloper by remember { mutableStateOf(false) }
+    var isClient by remember { mutableStateOf(false) }
 
     Box(
         modifier = Modifier.fillMaxSize(),
@@ -127,56 +134,104 @@ fun LoginScreen() {
                         attr("placeholder", "Password")
                     }
             )
-            Button(
-                attrs = Modifier
-                    .margin(bottom = 24.px)
+            // Move Developer/Client radio row above SignIn
+            Row(
+                modifier = Modifier
+                    .margin(top = 16.px, bottom = 16.px)
                     .width(350.px)
-                    .height(54.px)
-                    .backgroundColor(JsTheme.Primary.rgb)
-                    .color(Colors.White)
-                    .borderRadius(r = 4.px)
-                    .fontFamily(FONT_FAMILY)
-                    .fontWeight(FontWeight.Medium)
-                    .fontSize(14.px)
-                    .noBorder()
-                    .cursor(Cursor.Pointer)
-                    .onClick {
-                        scope.launch {
-                            // Use suspend logging functions so logs are sent to backend and saved in site.log
-                            logInfo("Login action started for username: " + (document.getElementById(Id.usernameInput) as HTMLInputElement).value, file = "Login.kt", function = "onClick")
-                            val username =
-                                (document.getElementById(Id.usernameInput) as HTMLInputElement).value
-                            val password =
-                                (document.getElementById(Id.passwordInput) as HTMLInputElement).value
-                            if (username.isNotEmpty() && password.isNotEmpty()) {
+                    .backgroundColor(Colors.White)
+                    .borderRadius(8.px)
+                    .padding(top = 12.px, bottom = 12.px, leftRight = 24.px),
+                horizontalArrangement = Arrangement.SpaceBetween,
+                verticalAlignment = Alignment.CenterVertically
+            ) {
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Input(
+                        type = InputType.Radio,
+                        attrs = Modifier.margin(right = 8.px).toAttrs {
+                            attr("name", "userType")
+                            if (isDeveloper) attr("checked", "checked")
+                            onInput { event ->
+                                isDeveloper = true
+                                isClient = false
+                            }
+                        }
+                    )
+                    SpanText(text = "Developer", modifier = Modifier.margin(right = 24.px).fontSize(16.px))
+                }
+                Row(verticalAlignment = Alignment.CenterVertically) {
+                    Input(
+                        type = InputType.Radio,
+                        attrs = Modifier.margin(right = 8.px).toAttrs {
+                            attr("name", "userType")
+                            if (isClient) attr("checked", "checked")
+                            onInput { event ->
+                                isClient = true
+                                isDeveloper = false
+                            }
+                        }
+                    )
+                    SpanText(text = "Client", modifier = Modifier.fontSize(16.px))
+                }
+            }
+            Box(modifier = Modifier.width(350.px).margin(bottom = 12.px), contentAlignment = Alignment.Center) {
+                SpanText(
+                    text = "SignIn",
+                    modifier = Modifier
+                        .padding(top = 8.px, bottom = 8.px, leftRight = 0.px)
+                        .width(350.px)
+                        .backgroundColor(JsTheme.Primary.rgb)
+                        .color(Colors.White)
+                        .fontSize(18.px)
+                        .fontWeight(FontWeight.Bold)
+                        .borderRadius(8.px)
+                        .cursor(if (isDeveloper || isClient) Cursor.Pointer else Cursor.NotAllowed)
+                        .textAlign(TextAlign.Center)
+                        .onClick {
+                            scope.launch {
+                                val username = (document.getElementById(Id.usernameInput) as HTMLInputElement).value
+                                val password = (document.getElementById(Id.passwordInput) as HTMLInputElement).value
+                                val role = if (isDeveloper) Type.Developer.type else if (isClient) Type.Client.type else ""
+                                if (role.isEmpty()) {
+                                    errorText = "Please select Developer or Client before signing in."
+                                    delay(3000)
+                                    errorText = " "
+                                    return@launch
+                                }
+                                logInfo("Login action started for username: $username", file = "Login.kt", function = "onClick")
                                 val user = checkUserExistence(
                                     user = User(
                                         username = username,
-                                        password = password
+                                        password = password,
+                                        role = role
                                     )
                                 )
-
-                                if (user != null) {
+                                if (user != null && user._id.isNotEmpty()) {
                                     logInfo("Login success for username: $username", file = "Login.kt", function = "onClick")
                                     rememberLoggedIn(remember = true, user = user)
                                     context.router.navigateTo(Screen.AdminHome.route)
                                 } else {
                                     logError("Login failed for username: $username - user does not exist.", file = "Login.kt", function = "onClick")
-                                    errorText = "The user doesn't exist."
+                                    errorText = "The user doesn't exist or credentials are incorrect."
                                     delay(3000)
                                     errorText = " "
                                 }
-                            } else {
-                                logError("Login failed - input fields are empty.", file = "Login.kt", function = "onClick")
-                                errorText = "Input fields are empty."
-                                delay(3000)
-                                errorText = " "
                             }
                         }
-                    }
-                    .toAttrs()
-            ) {
-                SpanText(text = "Sign in")
+                )
+            }
+            Box(modifier = Modifier.width(350.px).margin(bottom = 32.px), contentAlignment = Alignment.Center) {
+                SpanText(
+                    text = "Create Account",
+                    modifier = Modifier
+                        .fontSize(20.px)
+                        .fontWeight(FontWeight.Bold)
+                        .color(JsTheme.Primary.rgb)
+                        .textAlign(TextAlign.Center)
+                        .cursor(Cursor.Pointer)
+                        .padding(top = 4.px, bottom = 4.px)
+                        .onClick { context.router.navigateTo(SignUp.route) }
+                )
             }
             SpanText(
                 modifier = Modifier

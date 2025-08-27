@@ -7,6 +7,7 @@ import com.example.blogmultiplatform.models.ApiListResponse
 import com.example.blogmultiplatform.models.Constants.POSTS_PER_PAGE
 import com.example.blogmultiplatform.models.PostWithoutDetails
 import com.example.blogmultiplatform.navigation.Screen
+import com.example.blogmultiplatform.pages.admin.HomeScreen
 import com.example.blogmultiplatform.sections.FooterSection
 import com.example.blogmultiplatform.sections.HeaderSection
 import com.example.blogmultiplatform.sections.MainSection
@@ -17,6 +18,8 @@ import com.example.blogmultiplatform.util.fetchLatestPosts
 import com.example.blogmultiplatform.util.fetchMainPosts
 import com.example.blogmultiplatform.util.fetchPopularPosts
 import com.example.blogmultiplatform.util.fetchSponsoredPosts
+import com.example.blogmultiplatform.util.isUserLoggedIn
+import com.example.blogmultiplatform.util.logInfo
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
@@ -42,9 +45,19 @@ import com.varabyte.kobweb.compose.ui.modifiers.color
 import org.jetbrains.compose.web.dom.Img
 import org.jetbrains.compose.web.css.style
 
+
+
 @Page
 @Composable
-fun HomePage() {
+fun HomePage1() {
+
+    isUserLoggedIn {
+        HomeScreen()
+    }
+}
+
+@Composable
+fun HomeScreen1() {
     val context = rememberPageContext()
     val scope = rememberCoroutineScope()
     val breakpoint = rememberBreakpoint()

@@ -193,14 +193,15 @@ class MongoDB(private val context: InitApiContext) : MongoRepository {
 
     override suspend fun checkUserExistence(user: User): User? {
         val timestamp = java.time.LocalDateTime.now().withSecond(0).withNano(0)
-        logger.logInfo("[$timestamp] MongoDB.kt::checkUserExistence - checkUserExistence called for username: ${user.username}, password: ${user.password}")
+        logger.logInfo("[$timestamp] MongoDB.kt::checkUserExistence - checkUserExistence called for username: ${user.username}, password: ${user.password}, role: ${user.role}")
         return try {
             val doc = userCollection
                 .withDocumentClass(org.bson.Document::class.java)
                 .find(
                     Filters.and(
                         Filters.eq("username", user.username),
-                        Filters.eq("password", user.password)
+                        Filters.eq("password", user.password),
+                        Filters.eq("role", user.role),
                     )
                 ).firstOrNull()
             if (doc != null) {
@@ -210,7 +211,8 @@ class MongoDB(private val context: InitApiContext) : MongoRepository {
                 }
                 val username = doc.getString("username")
                 val password = doc.getString("password")
-                val userResult = User(_id = id, username = username, password = password)
+                val role = doc.getString("role")
+                val userResult = User(_id = id, username = username, password = password, role = role)
                 logger.logInfo("[$timestamp] MongoDB.kt::checkUserExistence - checkUserExistence result: ${userResult.username}, password: ${userResult.password}")
                 userResult
             } else {

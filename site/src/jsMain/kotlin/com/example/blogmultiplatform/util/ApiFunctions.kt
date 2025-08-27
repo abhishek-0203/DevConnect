@@ -26,13 +26,19 @@ import kotlin.js.Date
 suspend fun checkUserExistence(user: User): UserWithoutPassword? {
     val logger = LoggerImpl()
     return try {
-        window.api.tryPost(
+        val response = window.api.tryPost(
             apiPath = "usercheck",
             body = Json.encodeToString(user).encodeToByteArray()
-        )?.decodeToString().parseData()
+        )?.decodeToString()
+        if (response != null && response.contains("\"error\"")) {
+            logger.error("checkUserExistence error: $response", "ApiFunctions.kt", "checkUserExistence")
+            null
+        } else {
+            response.parseData()
+        }
     } catch (e: Exception) {
         logger.error("checkUserExistence error: ${e.message}", "ApiFunctions.kt", "checkUserExistence")
-        UserWithoutPassword(_id = user._id, username = user.username)
+        null
     }
 }
 

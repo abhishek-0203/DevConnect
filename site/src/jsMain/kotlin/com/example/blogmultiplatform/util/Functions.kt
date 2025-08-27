@@ -28,6 +28,7 @@ fun isUserLoggedIn(content: @Composable () -> Unit) {
     val context = rememberPageContext()
     val remembered = remember { localStorage["remember"].toBoolean() }
     val userId = remember { localStorage["userId"] }
+    val role = remember { localStorage["role"] }
 
     LaunchedEffect(Unit) {
         logInfo(

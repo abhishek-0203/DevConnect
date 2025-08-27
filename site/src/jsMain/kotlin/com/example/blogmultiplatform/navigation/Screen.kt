@@ -6,8 +6,14 @@ import com.example.blogmultiplatform.models.Constants.POST_ID_PARAM
 import com.example.blogmultiplatform.models.Constants.QUERY_PARAM
 import com.example.blogmultiplatform.models.Constants.UPDATED_PARAM
 
+sealed class Type(val type: String) {
+    object Developer : Type("developer")
+    object Client : Type("client")
+}
+
 sealed class Screen(val route: String) {
     object Chat : Screen(route = "/chat/")
+    object SignUp : Screen(route = "/signUp/")
     object AdminHome : Screen(route = "/admin/")
     object AdminLogin : Screen(route = "/admin/login")
     object AdminCreate : Screen(route = "/admin/create") {

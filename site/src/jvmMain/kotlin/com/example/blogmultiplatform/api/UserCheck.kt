@@ -13,6 +13,7 @@ import com.varabyte.kobweb.api.data.getValue
 import com.varabyte.kobweb.api.http.setBodyText
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.encodeToString
+import kotlinx.serialization.Serializable
 
 @Api(routeOverride = "usercheck")
 suspend fun userCheck(context: ApiContext) {
@@ -26,7 +27,7 @@ suspend fun userCheck(context: ApiContext) {
         logger.logInfo("UserCheck.kt::userCheck - Calling checkUserExistence")
         val user = userRequest?.let {
             context.data.getValue<MongoDB>().checkUserExistence(
-                User(username = it.username, password = it.password)
+                User(username = it.username, password = it.password, role = it.role)
             )
         }
         logger.logInfo("UserCheck.kt::userCheck - checkUserExistence result: ${user?.username}")
@@ -34,19 +35,19 @@ suspend fun userCheck(context: ApiContext) {
             logger.logInfo("UserCheck.kt::userCheck - Preparing success response for user: ${user.username}")
             context.res.setBodyText(
                 Json.encodeToString(
-                    UserWithoutPassword(_id = user._id, username = user.username)
+                    UserWithoutPassword(_id = user._id, username = user.username, role = user.role)
                 )
             )
             logger.logInfo("UserCheck.kt::userCheck - User check successful for user: ${user.username}")
         } else {
             logger.logInfo("UserCheck.kt::userCheck - Preparing failure response: User doesn't exist.")
-            context.res.setBodyText(Json.encodeToString("User doesn't exist."))
+            context.res.setBodyText(Json.encodeToString(ErrorResponse("User doesn't exist.")))
             logger.logWarning("UserCheck.kt::userCheck - User check failed: User doesn't exist.")
         }
         logger.logInfo("UserCheck.kt::userCheck - userCheck completed")
     } catch (e: Exception) {
         logger.logError("UserCheck.kt::userCheck - User check error: ${e.message}")
-        context.res.setBodyText(Json.encodeToString(e.message))
+        context.res.setBodyText(Json.encodeToString(ErrorResponse(e.message ?: "Unknown error")))
     }
 }
 
@@ -72,3 +73,6 @@ suspend fun checkUserId(context: ApiContext) {
         context.res.setBodyText(Json.encodeToString(false))
     }
 }
+
+@Serializable
+data class ErrorResponse(val error: String)
