@@ -76,3 +76,39 @@ suspend fun checkUserId(context: ApiContext) {
 
 @Serializable
 data class ErrorResponse(val error: String)
+
+@Serializable
+data class RegisterRequest(val username: String, val password: String, val email: String, val role: String)
+
+@Serializable
+data class RegisterResponse(val success: Boolean, val message: String)
+
+@Api(routeOverride = "register")
+suspend fun registerUser(context: ApiContext) {
+    val logger = LoggerImpl
+    try {
+        val req = context.req.body?.decodeToString()?.let { Json.decodeFromString<RegisterRequest>(it) }
+        if (req == null) {
+            context.res.setBodyText(Json.encodeToString(RegisterResponse(false, "Invalid request")))
+            return
+        }
+        val mongo = context.data.getValue<MongoDB>()
+        val mongoImpl = mongo as com.example.blogmultiplatform.data.MongoDB
+        // Check if username or email already exists
+        val exists = mongoImpl.isUserOrEmailExists(req.username, req.email)
+        if (exists) {
+            context.res.setBodyText(Json.encodeToString(RegisterResponse(false, "Username or email already exists.")))
+            return
+        }
+        // Insert user
+        val success = mongoImpl.insertUser(req.username, req.password, req.email, req.role)
+        if (success) {
+            context.res.setBodyText(Json.encodeToString(RegisterResponse(true, "Account created successfully.")))
+        } else {
+            context.res.setBodyText(Json.encodeToString(RegisterResponse(false, "Failed to create account.")))
+        }
+    } catch (e: Exception) {
+        logger.logError("registerUser error: ${e.message}")
+        context.res.setBodyText(Json.encodeToString(RegisterResponse(false, e.message ?: "Unknown error")))
+    }
+}

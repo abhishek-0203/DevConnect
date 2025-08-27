@@ -257,6 +257,29 @@ suspend fun subscribeToNewsletter(newsletter: Newsletter): String {
     )?.decodeToString().toString().replace("\"", "")
 }
 
+@kotlinx.serialization.Serializable
+data class RegisterRequest(val username: String, val password: String, val email: String, val role: String)
+@kotlinx.serialization.Serializable
+data class RegisterResponse(val success: Boolean, val message: String)
+
+suspend fun registerUser(username: String, password: String, email: String, role: String): Pair<Boolean, String> {
+    return try {
+        val req = RegisterRequest(username, password, email, role)
+        val response = window.api.tryPost(
+            apiPath = "register",
+            body = Json.encodeToString(req).encodeToByteArray()
+        )?.decodeToString()
+        if (response != null) {
+            val res = Json.decodeFromString<RegisterResponse>(response)
+            Pair(res.success, res.message)
+        } else {
+            Pair(false, "No response from server.")
+        }
+    } catch (e: Exception) {
+        Pair(false, e.message ?: "Unknown error")
+    }
+}
+
 inline fun <reified T> String?.parseData(): T {
     return Json.decodeFromString(this.toString())
 }

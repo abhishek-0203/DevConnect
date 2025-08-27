@@ -255,4 +255,33 @@ class MongoDB(private val context: InitApiContext) : MongoRepository {
             else "Something went wrong. Please try again later."
         }
     }
+
+    suspend fun isUserOrEmailExists(username: String, email: String): Boolean {
+        return try {
+            val userExists = userCollection.countDocuments(Filters.eq("username", username)) > 0
+            val emailExists = userCollection.countDocuments(Filters.eq("email", email)) > 0
+            userExists || emailExists
+        } catch (e: Exception) {
+            logger.logError("MongoDB.kt::isUserOrEmailExists - error: ${e.message}")
+            false
+        }
+    }
+
+    suspend fun insertUser(username: String, password: String, email: String, role: String): Boolean {
+        return try {
+            val user = User(
+                _id = ObjectId().toHexString(),
+                username = username,
+                password = password,
+                role = role,
+                email = email
+            )
+            val result = userCollection.insertOne(user).wasAcknowledged()
+            logger.logInfo("MongoDB.kt::insertUser - Inserted user: $username, result: $result")
+            result
+        } catch (e: Exception) {
+            logger.logError("MongoDB.kt::insertUser - error: ${e.message}")
+            false
+        }
+    }
 }
