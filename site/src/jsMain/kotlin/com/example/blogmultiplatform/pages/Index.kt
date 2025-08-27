@@ -45,17 +45,7 @@ import com.varabyte.kobweb.compose.ui.modifiers.color
 import org.jetbrains.compose.web.dom.Img
 import org.jetbrains.compose.web.css.style
 
-
-
 @Page
-@Composable
-fun HomePage1() {
-
-    isUserLoggedIn {
-        HomeScreen()
-    }
-}
-
 @Composable
 fun HomeScreen1() {
     val context = rememberPageContext()

@@ -207,9 +207,17 @@ fun LoginScreen() {
                                     )
                                 )
                                 if (user != null && user._id.isNotEmpty()) {
-                                    logInfo("Login success for username: $username", file = "Login.kt", function = "onClick")
-                                    rememberLoggedIn(remember = true, user = user)
-                                    context.router.navigateTo(Screen.AdminHome.route)
+                                    // It saves userId, username, role in localStorage
+                                    rememberLoggedIn(remember = true, user = user, role = role)
+                                    logInfo("Remember me set for file = Login.kt, username: $username, role: $role")
+
+                                    // Navigate based on role, AdminHome for Client, HomePage for Developer
+                                    if (user.role == Type.Client.type) {
+                                        context.router.navigateTo(Screen.AdminHome.route)
+                                    }
+                                    else {
+                                        context.router.navigateTo(Screen.HomePage.route)
+                                    }
                                 } else {
                                     logError("Login failed for username: $username - user does not exist.", file = "Login.kt", function = "onClick")
                                     errorText = "The user doesn't exist or credentials are incorrect."
@@ -247,12 +255,14 @@ fun LoginScreen() {
 
 private suspend fun rememberLoggedIn(
     remember: Boolean,
-    user: UserWithoutPassword? = null
+    user: UserWithoutPassword? = null,
+    role: String
 ) {
     logInfo("Login success for username: ${user?.username}, userId: ${user?._id}", file = "Login.kt", function = "rememberLoggedIn")
     localStorage["remember"] = remember.toString()
-    if (user != null) {
+    if (user != null)  {
         localStorage["userId"] = user._id
         localStorage["username"] = user.username
+        localStorage["role"] = role
     }
 }
