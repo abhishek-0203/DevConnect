@@ -17,6 +17,7 @@ import com.example.blogmultiplatform.models.EditorControl
 import com.example.blogmultiplatform.models.Post
 import com.example.blogmultiplatform.navigation.Screen
 import com.example.blogmultiplatform.styles.EditorKeyStyle
+import com.example.blogmultiplatform.theme.JsTheme
 import com.example.blogmultiplatform.util.Constants.FONT_FAMILY
 import com.example.blogmultiplatform.util.Constants.SIDE_PANEL_WIDTH
 import com.example.blogmultiplatform.util.Id
@@ -100,7 +101,6 @@ import org.w3c.dom.HTMLTextAreaElement
 import org.w3c.dom.get
 import kotlin.js.Date
 import com.example.shared.Category
-import com.example.shared.JsTheme
 
 data class CreatePageUiState(
     var id: String = "",
@@ -216,7 +216,7 @@ fun CreateScreen() {
                             modifier = Modifier
                                 .fontSize(14.px)
                                 .fontFamily(FONT_FAMILY)
-                                .color(JsTheme.HalfBlack.rgb),
+                                .color(JsTheme.HalfBlack),
                             text = "Popular"
                         )
                     }
@@ -238,7 +238,7 @@ fun CreateScreen() {
                             modifier = Modifier
                                 .fontSize(14.px)
                                 .fontFamily(FONT_FAMILY)
-                                .color(JsTheme.HalfBlack.rgb),
+                                .color(JsTheme.HalfBlack),
                             text = "Main"
                         )
                     }
@@ -257,7 +257,7 @@ fun CreateScreen() {
                             modifier = Modifier
                                 .fontSize(14.px)
                                 .fontFamily(FONT_FAMILY)
-                                .color(JsTheme.HalfBlack.rgb),
+                                .color(JsTheme.HalfBlack),
                             text = "Sponsored"
                         )
                     }
@@ -270,7 +270,7 @@ fun CreateScreen() {
                         .height(54.px)
                         .margin(topBottom = 12.px)
                         .padding(leftRight = 20.px)
-                        .backgroundColor(JsTheme.LightGray.rgb)
+                        .backgroundColor(JsTheme.LightGray)
                         .borderRadius(r = 4.px)
                         .noBorder()
                         .fontFamily(FONT_FAMILY)
@@ -287,7 +287,7 @@ fun CreateScreen() {
                         .fillMaxWidth()
                         .height(54.px)
                         .padding(leftRight = 20.px)
-                        .backgroundColor(JsTheme.LightGray.rgb)
+                        .backgroundColor(JsTheme.LightGray)
                         .borderRadius(r = 4.px)
                         .noBorder()
                         .fontFamily(FONT_FAMILY)
@@ -316,7 +316,7 @@ fun CreateScreen() {
                         modifier = Modifier
                             .fontSize(14.px)
                             .fontFamily(FONT_FAMILY)
-                            .color(JsTheme.HalfBlack.rgb),
+                            .color(JsTheme.HalfBlack),
                         text = "Paste an Image URL instead"
                     )
                 }
@@ -463,7 +463,7 @@ fun CategoryDropdown(
             .classNames("dropdown")
             .fillMaxWidth()
             .height(54.px)
-            .backgroundColor(JsTheme.LightGray.rgb)
+            .backgroundColor(JsTheme.LightGray)
             .cursor(Cursor.Pointer)
             .attrsModifier {
                 attr("data-bs-toggle", "dropdown")
@@ -529,7 +529,7 @@ fun ThumbnailUploader(
                 .fillMaxSize()
                 .margin(right = 12.px)
                 .padding(leftRight = 20.px)
-                .backgroundColor(JsTheme.LightGray.rgb)
+                .backgroundColor(JsTheme.LightGray)
                 .borderRadius(r = 4.px)
                 .noBorder()
                 .fontFamily(FONT_FAMILY)
@@ -555,8 +555,8 @@ fun ThumbnailUploader(
                 }
                 .fillMaxHeight()
                 .padding(leftRight = 24.px)
-                .backgroundColor(if (!thumbnailInputDisabled) JsTheme.Gray.rgb else JsTheme.Primary.rgb)
-                .color(if (!thumbnailInputDisabled) JsTheme.DarkGray.rgb else Colors.White)
+                .backgroundColor(if (!thumbnailInputDisabled) JsTheme.LightGray else JsTheme.Primary)
+                .color(if (!thumbnailInputDisabled) JsTheme.DarkGray else Colors.White)
                 .borderRadius(r = 4.px)
                 .noBorder()
                 .fontFamily(FONT_FAMILY)
@@ -588,7 +588,7 @@ fun EditorControls(
         ) {
             Row(
                 modifier = Modifier
-                    .backgroundColor(JsTheme.LightGray.rgb)
+                    .backgroundColor(JsTheme.LightGray)
                     .borderRadius(r = 4.px)
                     .height(54.px)
             ) {
@@ -617,11 +617,11 @@ fun EditorControls(
                         .padding(leftRight = 24.px)
                         .borderRadius(r = 4.px)
                         .backgroundColor(
-                            if (editorVisibility) JsTheme.LightGray.rgb
-                            else JsTheme.Primary.rgb
+                            if (editorVisibility) JsTheme.LightGray
+                            else JsTheme.Primary
                         )
                         .color(
-                            if (editorVisibility) JsTheme.DarkGray.rgb
+                            if (editorVisibility) JsTheme.DarkGray
                             else Colors.White
                         )
                         .noBorder()
@@ -678,7 +678,7 @@ fun Editor(editorVisibility: Boolean) {
                 .resize(Resize.None)
                 .margin(top = 8.px)
                 .padding(all = 20.px)
-                .backgroundColor(JsTheme.LightGray.rgb)
+                .backgroundColor(JsTheme.LightGray)
                 .borderRadius(r = 4.px)
                 .noBorder()
                 .visibility(
@@ -708,7 +708,7 @@ fun Editor(editorVisibility: Boolean) {
                 .maxHeight(400.px)
                 .margin(top = 8.px)
                 .padding(all = 20.px)
-                .backgroundColor(JsTheme.LightGray.rgb)
+                .backgroundColor(JsTheme.LightGray)
                 .borderRadius(r = 4.px)
                 .visibility(
                     if (editorVisibility) Visibility.Hidden
@@ -733,7 +733,7 @@ fun CreateButton(
             .fillMaxWidth()
             .height(54.px)
             .margin(top = 24.px)
-            .backgroundColor(JsTheme.Primary.rgb)
+            .backgroundColor(JsTheme.Primary)
             .color(Colors.White)
             .borderRadius(r = 4.px)
             .noBorder()

@@ -6,6 +6,7 @@ import com.example.blogmultiplatform.models.Newsletter
 import com.example.blogmultiplatform.models.Post
 import com.example.blogmultiplatform.models.PostWithoutDetails
 import com.example.blogmultiplatform.models.User
+import com.example.blogmultiplatform.models.Profile
 import com.example.blogmultiplatform.util.Constants.DATABASE_NAME
 import com.example.blogmultiplatform.util.Constants.MAIN_POSTS_LIMIT
 import com.example.blogmultiplatform.util.LoggerImpl
@@ -47,6 +48,7 @@ class MongoDB(private val context: InitApiContext) : MongoRepository {
     private val userCollection = database.getCollection<User>("user")
     private val postCollection = database.getCollection<Post>("post")
     private val newsletterCollection = database.getCollection<Newsletter>("newsletter")
+    private val profileCollection = database.getCollection<Profile>("profile")
 
     override suspend fun addPost(post: Post): Boolean {
         logger.logInfo("MongoDB.kt::addPost - addPost called for post: ${post.title}")
@@ -285,6 +287,48 @@ class MongoDB(private val context: InitApiContext) : MongoRepository {
             result.wasAcknowledged()
         } catch (e: Exception) {
             logger.logError("MongoDB.kt::insertUser - error: ${e.message}")
+            false
+        }
+    }
+
+    suspend fun getProfile(userId: String): Profile? {
+        return try {
+            val doc = profileCollection
+                .withDocumentClass(org.bson.Document::class.java)
+                .find(com.mongodb.client.model.Filters.eq("userId", userId))
+                .firstOrNull()
+            if (doc != null) {
+                Profile(
+                    userId = doc.getString("userId"),
+                    name = doc.getString("name"),
+                    bio = doc.getString("bio"),
+                    contact = doc.getString("contact"),
+                    role = doc.getString("role")
+                )
+            } else null
+        } catch (e: Exception) {
+            logger.logError("MongoDB.kt::getProfile - error: ${e.message}")
+            null
+        }
+    }
+
+    suspend fun saveProfile(profile: Profile): Boolean {
+        return try {
+            val doc = org.bson.Document()
+                .append("userId", profile.userId)
+                .append("name", profile.name)
+                .append("bio", profile.bio)
+                .append("contact", profile.contact)
+                .append("role", profile.role)
+            val result = profileCollection.withDocumentClass(org.bson.Document::class.java).replaceOne(
+                com.mongodb.client.model.Filters.eq("userId", profile.userId),
+                doc,
+                com.mongodb.client.model.ReplaceOptions().upsert(true)
+            )
+            logger.logInfo("MongoDB.kt::saveProfile - Saved profile for userId: ${profile.userId}, result: ${result.wasAcknowledged()}")
+            result.wasAcknowledged()
+        } catch (e: Exception) {
+            logger.logError("MongoDB.kt::saveProfile - error: ${e.message}")
             false
         }
     }

@@ -14,9 +14,9 @@ import com.example.blogmultiplatform.components.OverflowSidePanel
 import com.example.blogmultiplatform.models.ApiResponse
 import com.example.blogmultiplatform.models.Constants.POST_ID_PARAM
 import com.example.blogmultiplatform.models.Post
-import com.example.shared.JsTheme
 import com.example.blogmultiplatform.sections.FooterSection
 import com.example.blogmultiplatform.sections.HeaderSection
+import com.example.blogmultiplatform.theme.JsTheme
 import com.example.blogmultiplatform.util.Constants.FONT_FAMILY
 import com.example.blogmultiplatform.util.Id
 import com.example.blogmultiplatform.util.Res
@@ -151,7 +151,7 @@ fun PostContent(
         SpanText(
             modifier = Modifier
                 .fillMaxWidth()
-                .color(JsTheme.HalfBlack.rgb)
+                .color(JsTheme.HalfBlack)
                 .fontFamily(FONT_FAMILY)
                 .fontSize(14.px),
             text = post.date.toLong().parseDateString()

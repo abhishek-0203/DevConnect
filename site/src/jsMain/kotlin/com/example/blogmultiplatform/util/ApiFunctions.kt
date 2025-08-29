@@ -13,6 +13,7 @@ import com.example.blogmultiplatform.models.Post
 import com.example.blogmultiplatform.models.RandomJoke
 import com.example.blogmultiplatform.models.User
 import com.example.blogmultiplatform.models.UserWithoutPassword
+import com.example.blogmultiplatform.models.Profile
 import com.varabyte.kobweb.browser.api
 import com.varabyte.kobweb.browser.http.http
 import kotlinx.browser.localStorage
@@ -277,6 +278,41 @@ suspend fun registerUser(username: String, password: String, role: String): Pair
         }
     } catch (e: Exception) {
         Pair(false, e.message ?: "Unknown error")
+    }
+}
+
+@kotlinx.serialization.Serializable
+data class ProfileResponse(val success: Boolean, val message: String, val profile: Profile? = null)
+
+suspend fun getProfile(userId: String): ProfileResponse {
+    return try {
+        val response = window.api.tryPost(
+            apiPath = "getprofile",
+            body = Json.encodeToString(userId).encodeToByteArray()
+        )?.decodeToString()
+        if (response != null) {
+            Json.decodeFromString<ProfileResponse>(response)
+        } else {
+            ProfileResponse(false, "No response from server.")
+        }
+    } catch (e: Exception) {
+        ProfileResponse(false, e.message ?: "Unknown error")
+    }
+}
+
+suspend fun saveProfile(profile: Profile): ProfileResponse {
+    return try {
+        val response = window.api.tryPost(
+            apiPath = "saveprofile",
+            body = Json.encodeToString(profile).encodeToByteArray()
+        )?.decodeToString()
+        if (response != null) {
+            Json.decodeFromString<ProfileResponse>(response)
+        } else {
+            ProfileResponse(false, "No response from server.")
+        }
+    } catch (e: Exception) {
+        ProfileResponse(false, e.message ?: "Unknown error")
     }
 }
 

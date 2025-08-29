@@ -3,7 +3,7 @@ package com.example.blogmultiplatform.sections
 import androidx.compose.runtime.Composable
 import com.example.blogmultiplatform.components.PostPreview
 import com.example.blogmultiplatform.models.PostWithoutDetails
-import com.example.shared.JsTheme
+import com.example.blogmultiplatform.theme.JsTheme
 import com.example.blogmultiplatform.util.Constants.FONT_FAMILY
 import com.example.blogmultiplatform.util.Constants.PAGE_WIDTH
 import com.varabyte.kobweb.compose.css.FontWeight
@@ -40,7 +40,7 @@ fun SponsoredPostsSection(
         modifier = Modifier
             .fillMaxWidth()
             .margin(bottom = 100.px)
-            .backgroundColor(JsTheme.LightGray.rgb),
+            .backgroundColor(JsTheme.LightGray),
         contentAlignment = Alignment.Center
     ) {
         Box(
@@ -50,11 +50,21 @@ fun SponsoredPostsSection(
                 .margin(topBottom = 50.px),
             contentAlignment = Alignment.TopCenter
         ) {
-            SponsoredPosts(
-                breakpoint = breakpoint,
-                posts = posts,
-                onClick = onClick
-            )
+            if (posts.isEmpty()) {
+                SpanText(
+                    modifier = Modifier
+                        .fontFamily(FONT_FAMILY)
+                        .fontSize(20.px)
+                        .color(JsTheme.HalfBlack),
+                    text = "No sponsored posts available."
+                )
+            } else {
+                SponsoredPosts(
+                    breakpoint = breakpoint,
+                    posts = posts,
+                    onClick = onClick
+                )
+            }
         }
     }
 }
@@ -79,7 +89,7 @@ fun SponsoredPosts(
             FaTag(
                 modifier = Modifier
                     .margin(right = 10.px)
-                    .color(JsTheme.Sponsored.rgb),
+                    .color(JsTheme.Sponsored),
                 size = IconSize.XL
             )
             SpanText(
@@ -87,7 +97,7 @@ fun SponsoredPosts(
                     .fontFamily(FONT_FAMILY)
                     .fontSize(18.px)
                     .fontWeight(FontWeight.Medium)
-                    .color(JsTheme.Sponsored.rgb),
+                    .color(JsTheme.Sponsored),
                 text = "Sponsored Posts"
             )
         }
@@ -101,7 +111,7 @@ fun SponsoredPosts(
                     post = post,
                     vertical = breakpoint < Breakpoint.MD,
                     titleMaxLines = 1,
-                    titleColor = JsTheme.Sponsored.rgb,
+                    titleColor = JsTheme.Sponsored,
                     thumbnailHeight = if (breakpoint >= Breakpoint.MD) 200.px else 300.px,
                     onClick = onClick
                 )

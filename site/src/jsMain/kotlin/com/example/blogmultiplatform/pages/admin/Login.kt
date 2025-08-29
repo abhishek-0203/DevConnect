@@ -6,7 +6,6 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
-import com.example.shared.JsTheme
 import com.example.blogmultiplatform.models.User
 import com.example.blogmultiplatform.models.UserWithoutPassword
 import com.example.blogmultiplatform.navigation.Screen
@@ -66,6 +65,7 @@ import org.jetbrains.compose.web.dom.Button
 import org.jetbrains.compose.web.dom.Input
 import org.w3c.dom.HTMLInputElement
 import org.w3c.dom.set
+import com.example.blogmultiplatform.theme.JsTheme
 
 @Page
 @Composable
@@ -83,7 +83,7 @@ fun LoginScreen() {
         Column(
             modifier = Modifier
                 .padding(leftRight = 50.px, top = 80.px, bottom = 24.px)
-                .backgroundColor(JsTheme.LightGray.rgb),
+                .backgroundColor(JsTheme.LightGray),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
@@ -180,7 +180,7 @@ fun LoginScreen() {
                     modifier = Modifier
                         .padding(top = 8.px, bottom = 8.px, leftRight = 0.px)
                         .width(350.px)
-                        .backgroundColor(JsTheme.Primary.rgb)
+                        .backgroundColor(JsTheme.Primary)
                         .color(Colors.White)
                         .fontSize(18.px)
                         .fontWeight(FontWeight.Bold)
@@ -234,7 +234,7 @@ fun LoginScreen() {
                     modifier = Modifier
                         .fontSize(20.px)
                         .fontWeight(FontWeight.Bold)
-                        .color(JsTheme.Primary.rgb)
+                        .color(JsTheme.Primary)
                         .textAlign(TextAlign.Center)
                         .cursor(Cursor.Pointer)
                         .padding(top = 4.px, bottom = 4.px)

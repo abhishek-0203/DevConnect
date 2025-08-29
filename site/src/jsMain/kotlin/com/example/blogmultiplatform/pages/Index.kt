@@ -18,6 +18,7 @@ import com.example.blogmultiplatform.util.fetchLatestPosts
 import com.example.blogmultiplatform.util.fetchMainPosts
 import com.example.blogmultiplatform.util.fetchPopularPosts
 import com.example.blogmultiplatform.util.fetchSponsoredPosts
+import com.example.blogmultiplatform.util.getProfile
 import com.example.blogmultiplatform.util.isUserLoggedIn
 import com.example.blogmultiplatform.util.logInfo
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
@@ -25,6 +26,7 @@ import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
+import com.varabyte.kobweb.compose.ui.graphics.Colors
 import com.varabyte.kobweb.compose.ui.modifiers.bottom
 import com.varabyte.kobweb.compose.ui.modifiers.fillMaxSize
 import com.varabyte.kobweb.compose.ui.modifiers.position
@@ -37,11 +39,15 @@ import com.varabyte.kobweb.core.Page
 import com.varabyte.kobweb.core.rememberPageContext
 import com.varabyte.kobweb.silk.components.text.SpanText
 import com.varabyte.kobweb.silk.theme.breakpoint.rememberBreakpoint
+import kotlinx.browser.localStorage
 import kotlinx.coroutines.launch
 import org.jetbrains.compose.web.css.Position
 import org.jetbrains.compose.web.css.px
 import com.varabyte.kobweb.compose.ui.modifiers.fontSize
 import com.varabyte.kobweb.compose.ui.modifiers.color
+import com.varabyte.kobweb.compose.ui.modifiers.height
+import com.varabyte.kobweb.compose.ui.modifiers.margin
+import com.varabyte.kobweb.compose.ui.modifiers.width
 import org.jetbrains.compose.web.dom.Img
 import org.jetbrains.compose.web.css.style
 
@@ -60,8 +66,22 @@ fun HomeScreen1() {
     var popularPostsToSkip by remember { mutableStateOf(0) }
     var showMoreLatest by remember { mutableStateOf(false) }
     var showMorePopular by remember { mutableStateOf(false) }
+    var profileName by remember { mutableStateOf("") }
 
     LaunchedEffect(Unit) {
+        val storedName = localStorage.getItem("profileName")
+        if (storedName != null && storedName.isNotBlank()) {
+            profileName = storedName
+        } else {
+            val userId = localStorage.getItem("userId") ?: ""
+            if (userId.isNotBlank()) {
+                val response = getProfile(userId)
+                if (response.success && response.profile != null) {
+                    profileName = response.profile.name
+                    localStorage.setItem("profileName", response.profile.name)
+                }
+            }
+        }
         fetchMainPosts(
             onSuccess = { mainPosts = it },
             onError = {}
@@ -112,7 +132,8 @@ fun HomeScreen1() {
         }
         HeaderSection(
             breakpoint = breakpoint,
-            onMenuOpen = { overflowOpened = true }
+            onMenuOpen = { overflowOpened = true },
+            profileName = profileName
         )
         MainSection(
             breakpoint = breakpoint,

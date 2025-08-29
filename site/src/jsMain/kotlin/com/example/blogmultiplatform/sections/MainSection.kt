@@ -4,7 +4,7 @@ import androidx.compose.runtime.Composable
 import com.example.blogmultiplatform.components.PostPreview
 import com.example.blogmultiplatform.models.ApiListResponse
 import com.example.blogmultiplatform.models.PostWithoutDetails
-import com.example.shared.JsTheme
+import com.example.blogmultiplatform.theme.JsTheme
 import com.example.blogmultiplatform.util.Constants.PAGE_WIDTH
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
@@ -28,13 +28,14 @@ fun MainSection(
     Box(
         modifier = Modifier
             .fillMaxWidth()
-            .backgroundColor(JsTheme.Secondary.rgb),
+            .backgroundColor(JsTheme.LightGray), // Changed from Secondary (white) to LightGray (grey)
         contentAlignment = Alignment.Center
     ) {
         Box(
             modifier = Modifier
                 .fillMaxWidth()
-                .maxWidth(PAGE_WIDTH.px),
+                .maxWidth(PAGE_WIDTH.px)
+                .backgroundColor(JsTheme.LightGray), // Set Main content area to grey
             contentAlignment = Alignment.Center
         ) {
             when (posts) {
@@ -66,6 +67,7 @@ fun MainPosts(
                 else 90.percent
             )
             .margin(topBottom = 50.px)
+            .backgroundColor(JsTheme.LightGray) // Set background to grey
     ) {
         if (breakpoint == Breakpoint.XL) {
             PostPreview(

@@ -9,8 +9,8 @@ import androidx.compose.runtime.setValue
 import com.example.blogmultiplatform.components.AdminPageLayout
 import com.example.blogmultiplatform.components.LoadingIndicator
 import com.example.blogmultiplatform.models.RandomJoke
-import com.example.shared.JsTheme
 import com.example.blogmultiplatform.navigation.Screen
+import com.example.blogmultiplatform.theme.JsTheme
 import com.example.blogmultiplatform.util.Constants.FONT_FAMILY
 import com.example.blogmultiplatform.util.Constants.PAGE_WIDTH
 import com.example.blogmultiplatform.util.Constants.SIDE_PANEL_WIDTH
@@ -120,7 +120,7 @@ fun HomeContent(randomJoke: RandomJoke?) {
                             .margin(bottom = 14.px)
                             .fillMaxWidth(40.percent)
                             .textAlign(TextAlign.Center)
-                            .color(JsTheme.Secondary.rgb)
+                            .color(JsTheme.Secondary)
                             .fontSize(28.px)
                             .fontFamily(FONT_FAMILY)
                             .fontWeight(FontWeight.Bold),
@@ -130,7 +130,7 @@ fun HomeContent(randomJoke: RandomJoke?) {
                         modifier = Modifier
                             .fillMaxWidth(40.percent)
                             .textAlign(TextAlign.Center)
-                            .color(JsTheme.HalfBlack.rgb)
+                            .color(JsTheme.HalfBlack)
                             .fontSize(20.px)
                             .fontFamily(FONT_FAMILY)
                             .fontWeight(FontWeight.Normal),
@@ -142,7 +142,7 @@ fun HomeContent(randomJoke: RandomJoke?) {
                             .margin(bottom = 14.px)
                             .fillMaxWidth(40.percent)
                             .textAlign(TextAlign.Center)
-                            .color(JsTheme.Secondary.rgb)
+                            .color(JsTheme.Secondary)
                             .fontFamily(FONT_FAMILY)
                             .fontSize(28.px)
                             .fontWeight(FontWeight.Bold),
@@ -177,7 +177,7 @@ fun AddButton() {
                     right = if (breakpoint > Breakpoint.MD) 40.px else 20.px,
                     bottom = if (breakpoint > Breakpoint.MD) 40.px else 20.px
                 )
-                .backgroundColor(JsTheme.Primary.rgb)
+                .backgroundColor(JsTheme.Primary)
                 .size(if (breakpoint > Breakpoint.MD) 80.px else 50.px)
                 .borderRadius(r = 14.px)
                 .cursor(Cursor.Pointer)

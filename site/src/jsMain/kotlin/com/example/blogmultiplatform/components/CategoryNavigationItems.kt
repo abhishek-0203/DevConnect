@@ -2,9 +2,9 @@ package com.example.blogmultiplatform.components
 
 import androidx.compose.runtime.Composable
 import com.example.shared.Category
-import com.example.shared.JsTheme
 import com.example.blogmultiplatform.navigation.Screen
 import com.example.blogmultiplatform.styles.CategoryItemStyle
+import com.example.blogmultiplatform.theme.JsTheme
 import com.example.blogmultiplatform.util.Constants
 import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.css.TextDecorationLine
@@ -41,7 +41,7 @@ fun CategoryNavigationItems(
                 )
                 .thenIf(
                     condition = selectedCategory == category,
-                    other = Modifier.color(JsTheme.Primary.rgb)
+                    other = Modifier.color(JsTheme.Primary)
                 )
                 .fontFamily(Constants.FONT_FAMILY)
                 .fontSize(16.px)

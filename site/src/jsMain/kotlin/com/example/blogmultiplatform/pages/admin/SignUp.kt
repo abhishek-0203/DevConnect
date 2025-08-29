@@ -1,7 +1,6 @@
 package com.example.blogmultiplatform.pages.admin
 
 import androidx.compose.runtime.*
-import com.example.shared.JsTheme
 import com.example.blogmultiplatform.models.User
 import com.example.blogmultiplatform.navigation.Screen
 import com.example.blogmultiplatform.navigation.Type
@@ -72,8 +71,7 @@ fun SignUpScreen() {
     ) {
         Column(
             modifier = Modifier
-                .padding(leftRight = 50.px, top = 80.px, bottom = 24.px)
-                .backgroundColor(JsTheme.LightGray.rgb),
+                .padding(leftRight = 50.px, top = 80.px, bottom = 24.px),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
@@ -171,7 +169,6 @@ fun SignUpScreen() {
                     modifier = Modifier
                         .padding(top = 8.px, bottom = 8.px, leftRight = 0.px)
                         .width(350.px)
-                        .backgroundColor(JsTheme.Primary.rgb)
                         .color(Colors.White)
                         .fontSize(18.px)
                         .fontWeight(FontWeight.Bold)

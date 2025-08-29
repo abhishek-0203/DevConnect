@@ -1,6 +1,5 @@
 package com.example.blogmultiplatform.styles
 
-import com.example.shared.JsTheme
 import com.varabyte.kobweb.compose.css.CSSTransition
 import com.varabyte.kobweb.compose.css.TransitionProperty
 import com.varabyte.kobweb.compose.ui.Modifier
@@ -34,12 +33,10 @@ val NewsletterInputStyle by ComponentStyle {
             .outline(
                 width = 1.px,
                 style = LineStyle.Solid,
-                color = JsTheme.Primary.rgb
             )
             .border(
                 width = 1.px,
                 style = LineStyle.Solid,
-                color = JsTheme.Primary.rgb
             )
     }
 }

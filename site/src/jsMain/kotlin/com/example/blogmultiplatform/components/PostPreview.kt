@@ -6,9 +6,9 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import com.example.blogmultiplatform.models.PostWithoutDetails
-import com.example.shared.JsTheme
 import com.example.blogmultiplatform.styles.MainPostPreviewStyle
 import com.example.blogmultiplatform.styles.PostPreviewStyle
+import com.example.blogmultiplatform.theme.JsTheme
 import com.example.blogmultiplatform.util.Constants.FONT_FAMILY
 import com.example.blogmultiplatform.util.parseDateString
 import com.varabyte.kobweb.compose.css.CSSTransition
@@ -24,6 +24,7 @@ import com.varabyte.kobweb.compose.foundation.layout.Row
 import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.graphics.Colors
+import com.varabyte.kobweb.compose.ui.modifiers.backgroundColor
 import com.varabyte.kobweb.compose.ui.modifiers.border
 import com.varabyte.kobweb.compose.ui.modifiers.borderRadius
 import com.varabyte.kobweb.compose.ui.modifiers.color
@@ -50,6 +51,7 @@ import com.varabyte.kobweb.silk.components.text.SpanText
 import org.jetbrains.compose.web.css.CSSColorValue
 import org.jetbrains.compose.web.css.CSSSizeValue
 import org.jetbrains.compose.web.css.CSSUnit
+import org.jetbrains.compose.web.css.Color
 import org.jetbrains.compose.web.css.LineStyle
 import org.jetbrains.compose.web.css.ms
 import org.jetbrains.compose.web.css.percent
@@ -85,7 +87,7 @@ fun PostPreview(
                 .then(modifier)
                 .fillMaxWidth(
                     if (darkTheme) 100.percent
-                    else if (titleColor == JsTheme.Sponsored.rgb) 100.percent
+                    else if (titleColor == JsTheme.Sponsored) 100.percent
                     else 95.percent
                 )
                 .margin(bottom = 24.px)
@@ -94,7 +96,7 @@ fun PostPreview(
                 .border(
                     width = if (selectableMode) 4.px else 0.px,
                     style = if (selectableMode) LineStyle.Solid else LineStyle.None,
-                    color = if (checked) JsTheme.Primary.rgb else JsTheme.Gray.rgb
+                    color = if (checked) JsTheme.Primary else JsTheme.DarkGray
                 )
                 .onClick {
                     if (selectableMode) {
@@ -185,7 +187,10 @@ fun PostContent(
             modifier = Modifier
                 .fontFamily(FONT_FAMILY)
                 .fontSize(12.px)
-                .color(if (darkTheme) JsTheme.HalfWhite.rgb else JsTheme.HalfBlack.rgb),
+                .color(Color("#222831")) // Use dark color for date text
+                .backgroundColor(Color("rgba(255,255,255,0.85)")) // Add semi-opaque white background
+                .padding(leftRight = 8.px, topBottom = 2.px)
+                .borderRadius(r = 8.px),
             text = post.date.toLong().parseDateString()
         )
         SpanText(

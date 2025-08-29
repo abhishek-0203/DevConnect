@@ -15,8 +15,8 @@ import com.example.blogmultiplatform.models.ApiListResponse
 import com.example.blogmultiplatform.models.Constants.POSTS_PER_PAGE
 import com.example.blogmultiplatform.models.Constants.QUERY_PARAM
 import com.example.blogmultiplatform.models.PostWithoutDetails
-import com.example.shared.JsTheme
 import com.example.blogmultiplatform.navigation.Screen
+import com.example.blogmultiplatform.theme.JsTheme
 import com.example.blogmultiplatform.util.Constants.FONT_FAMILY
 import com.example.blogmultiplatform.util.Constants.SIDE_PANEL_WIDTH
 import com.example.blogmultiplatform.util.Id
@@ -189,7 +189,7 @@ fun MyPostsScreen() {
                         }
                     )
                     SpanText(
-                        modifier = Modifier.color(if (selectableMode) Colors.Black else JsTheme.HalfBlack.rgb),
+                        modifier = Modifier.color(if (selectableMode) com.varabyte.kobweb.compose.ui.graphics.Colors.Black else JsTheme.HalfBlack),
                         text = switchText
                     )
                 }
@@ -198,7 +198,7 @@ fun MyPostsScreen() {
                         .margin(right = 20.px)
                         .height(54.px)
                         .padding(leftRight = 24.px)
-                        .backgroundColor(JsTheme.Red.rgb)
+                        .backgroundColor(JsTheme.Red)
                         .color(Colors.White)
                         .noBorder()
                         .borderRadius(r = 4.px)

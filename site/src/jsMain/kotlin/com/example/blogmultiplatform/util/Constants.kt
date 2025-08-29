@@ -14,6 +14,7 @@ object Res {
         const val logo = "/logo.svg"
         const val logoHome = "logo.svg "
         const val laugh = "/laugh.png"
+        const val profileIcon = "/profile.png" // Add a placeholder profile icon
     }
     object Icon {
         const val bold = "/bold.svg"
